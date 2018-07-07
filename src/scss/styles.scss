@@ -1,1 +1,17 @@
+// Variable Overrides
 
+$body-bg: #ffffff;
+
+$theme-colors: (
+  "primary": #3F7B3F
+);
+
+.footer {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #DCDCDC;
+}
+
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
