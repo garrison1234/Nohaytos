@@ -10,6 +10,9 @@ app.use('/fonts',express.static(__dirname + '/scss'));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/index.html');
 });
+app.get('/acercade', function (req, res) {
+  res.send('acercade')
+})
 
 server.listen(process.env.PORT || 8081,function(){
   console.log('Listening on '+server.address().port);
