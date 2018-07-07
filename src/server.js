@@ -11,7 +11,7 @@ app.get('/',function(req,res){
   res.sendFile(__dirname+'/index.html');
 });
 app.get('/acercade', function (req, res) {
-  res.send('acercade')
+  res.sendFile(__dirname+'/acercade.html');
 })
 
 server.listen(process.env.PORT || 8081,function(){
