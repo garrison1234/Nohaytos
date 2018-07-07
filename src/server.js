@@ -13,6 +13,9 @@ app.get('/',function(req,res){
 app.get('/acercade', function (req, res) {
   res.sendFile(__dirname+'/acercade.html');
 })
+app.get('/blog', function (req, res) {
+  res.sendFile(__dirname+'/blog.html');
+})
 
 server.listen(process.env.PORT || 8081,function(){
   console.log('Listening on '+server.address().port);
