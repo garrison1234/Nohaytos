@@ -17,6 +17,9 @@ app.get('/favicon',function(req,res){
 app.get('/nav', function (req, res) {
   res.sendFile(__dirname+'/nav.html');
 })
+app.get('/banner', function (req, res) {
+  res.sendFile(__dirname+'/banner.html');
+})
 app.get('/footer', function (req, res) {
   res.sendFile(__dirname+'/footer.html');
 })
