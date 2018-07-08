@@ -29,6 +29,9 @@ app.get('/acercade', function (req, res) {
 app.get('/blog', function (req, res) {
   res.sendFile(__dirname+'/blog.html');
 })
+app.get('/contacto', function (req, res) {
+  res.sendFile(__dirname+'/contacto.html');
+})
 
 server.listen(process.env.PORT || 8081,function(){
   console.log('Listening on '+server.address().port);

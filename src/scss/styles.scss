@@ -11,12 +11,19 @@ $theme-colors: (
   //"dark": #000000
 );
 
-body {
-  font-family: 'Roboto Slab', serif !important;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
+body {
+  font-family: 'Roboto Slab', serif !important;
+  margin-bottom: 100%;
+}
 
 .footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 40px;
   line-height: 40px;
