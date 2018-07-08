@@ -1,24 +1,11 @@
+body {
+  font-family: 'Roboto Slab', serif !important; }
+
 .footer {
-  font-family: "Roboto Slab", serif;
   width: 100%;
   height: 40px;
   line-height: 40px;
-  background-color: #DCDCDC; }
-
-.navbar {
-  font-family: "Roboto Slab", serif; }
-
-.header1 {
-  font-family: "Roboto Slab", serif; }
-
-.header2 {
-  font-family: "Roboto Slab", serif; }
-
-.header2 {
-  font-family: "Roboto Slab", serif; }
-
-.episode {
-  font-family: "Roboto Slab", serif; }
+  background-color: #D8D8D8; }
 
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)

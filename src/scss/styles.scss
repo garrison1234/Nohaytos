@@ -11,32 +11,16 @@ $theme-colors: (
   //"dark": #000000
 );
 
+body {
+  font-family: 'Roboto Slab', serif !important;
+}
+
+
 .footer {
-  font-family: $font-family;
   width: 100%;
   height: 40px;
   line-height: 40px;
-  background-color: #DCDCDC;
-}
-
-.navbar {
-  font-family: $font-family;
-}
-
-.header1 {
-  font-family: $font-family;
-}
-
-.header2 {
-  font-family: $font-family;
-}
-
-.header2 {
-  font-family: $font-family;
-}
-
-.episode{
-  font-family: $font-family;
+  background-color: #D8D8D8;
 }
 
 // Bootstrap Sass Imports

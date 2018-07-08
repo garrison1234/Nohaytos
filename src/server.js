@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path')
 var app = express();
 var server = require('http').Server(app);
 
@@ -10,6 +11,18 @@ app.use('/fonts',express.static(__dirname + '/scss'));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/index.html');
 });
+app.get('/favicon',function(req,res){
+  res.sendFile(__dirname+'/favicon.ico');
+});
+app.get('/nav', function (req, res) {
+  res.sendFile(__dirname+'/nav.html');
+})
+app.get('/footer', function (req, res) {
+  res.sendFile(__dirname+'/footer.html');
+})
+app.get('/episodios', function (req, res) {
+  res.sendFile(__dirname+'/episodios.html');
+})
 app.get('/acercade', function (req, res) {
   res.sendFile(__dirname+'/acercade.html');
 })

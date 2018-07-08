@@ -9,46 +9,126 @@
         <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/bootstrap.css">
         <link rel="stylesheet" href="/css/styles.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     </head>
 
     <body>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-          <a class="navbar-brand" href="/">NoHayTos</a>
+      <!--Navigation bar-->
+      <div id="nav-placeholder"></div>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="/acercade">Acerca de</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/blog">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="https://www.patreon.com">Patreon</a>
-                  </li>
-              </ul>
-          </div>
-      </nav>
+      <script>
+      $(function(){
+        $("#nav-placeholder").load("/nav");
+      });
+      </script>
 
       <div class="container">
-        <div class="row header">
+
+        <div class="row">
           <div class="col mb-5">
-              <h1 class="header1" style="display: inline;">No Hay Tos</h1>
-              <h3 class="header2" style="display: inline;">es un podcast para estudiantes de Español que quieren estar expuestos a conversaciones reales.</h3>
+            <img src="/assets/Logo_Nohaytos.jpg" class="img-fluid" alt="100%x250" style="width: 100%; display: block;">
           </div>
         </div>
+
+        <div class="row">
+          <div class="col mb-2">
+              <p class="h1">Acerca de No Hay Tos</p>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+              <p class="lead">No Hay Tos es un podcast realizado por Roberto Andrade y Héctor Libreros donde se habla de la vida
+                diaria en México, noticias y demas temas de interés general para ayudar la comprensión auditiva de estudiantes
+                de Español, exponiendoles a conversaciones reales.</p>
+          </div>
+          <div class="col col-0 col-sm-0 col-md-4 col-lg-4 col-xl-4">
+          </div>
+        </div>
+
+        <div class="row mb-1">
+          <div class="col">
+              <p class="h4">Roberto Andrade</p>
+          </div>
+        </div>
+
+        <div class="row mb-1">
+          <div class="col ">
+              <img src="/assets/fotoRoberto.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+              <p class="lead" style="display: inline;">Beto es un músico/ percusionista que actualmente reside en la ciudad de Xalapa, Mexico.
+                Imparte clases de ingles y español en línea como también toca en el proyecto musical Tercer Oido</p>
+                <a style="display: inline;" href="https://soundcloud.com/user-430871153" class="lead" target="_blank">(escúchalos aquí)</a>
+          </div>
+          <div class="col col-0 col-sm-0 col-md-4 col-lg-4 col-xl-4">
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <p class="lead" style="display: inline;">Lo puedes contactar por correo a:</p>
+            <script language="JavaScript">
+              var username = "randrade89";
+              var hostname = "gmail.com";
+              var linktext = username + "@" + hostname ;
+              document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+            </script>
+          </div>
+          <div class="col col-0 col-sm-0 col-md-4 col-lg-4 col-xl-4">
+          </div>
+        </div>
+
+        <div class="row mb-1">
+          <div class="col">
+              <p class="h4">Héctor Libreros</p>
+          </div>
+        </div>
+
+        <div class="row mb-1">
+          <div class="col ">
+              <img src="/assets/fotoHector.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+              <p class="lead" style="display: inline;">Héctor es un comunicólogo que reside en la ciudad de Veracruz, Mexico. Tiene varios años de
+                experiencia como maestro de Inglés y Español. Actualmente se dedica a la enseñanza en línea.</p>
+          </div>
+          <div class="col col-0 col-sm-0 col-md-4 col-lg-4 col-xl-4">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <p class="lead" style="display: inline;">Lo puedes contactar a:</p>
+            <script language="JavaScript">
+              var username = "halots";
+              var hostname = "gmail.com";
+              var linktext = username + "@" + hostname ;
+              document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+            </script>
+          </div>
+          <div class="col col-0 col-sm-0 col-md-4 col-lg-4 col-xl-4">
+          </div>
+        </div>
+
       </div>
 
-      <footer class="footer">
-        <div class="container text-center">
-          <span class="text-muted">Contacto: nohaytospodcast@gmail.com</span>
-        </div>
-      </footer>
+      <!--Footer-->
+      <div id="footer-placeholder"></div>
+
+      <script>
+      $(function(){
+        $("#footer-placeholder").load("/footer");
+      });
+      </script>
 
         <script src="/js/jquery.min.js"></script>
         <script src="/js/popper.min.js"></script>
