@@ -53,6 +53,16 @@
                   $( ".date" ).remove();
                 });
                 </script>
+                <script>
+                $( "div" ).addClass(function( index, currentClass ) {
+                  var addedClass;
+                  if (currentClass.indexOf("episode") >= 0) {
+                    console.log('description class found');
+                    addedClass = "mb-5";
+                  }
+                  return addedClass;
+                });
+                </script>
                 <p>Se le llama “botana” a un aperitivo o comida ligera que se consume antes del almuerzo o la cena,
                   básicamente un snack. En México tenemos muchas botanas, y la mayoría tienen la característica de ir
                   acompañadas con algún tipo de chile o picante.</p>

@@ -41,6 +41,16 @@
         </div>
 
       <script src="https://www.buzzsprout.com/162248.js?player=small" type="text/javascript" charset="utf-8"></script>
+      <script>
+      $( "div" ).addClass(function( index, currentClass ) {
+        var addedClass;
+        if (currentClass.indexOf("description") >= 0) {
+          console.log('description class found');
+          addedClass = "mb-5";
+        }
+        return addedClass;
+      });
+      </script>
 
       </div>
 
