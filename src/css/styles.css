@@ -6,6 +6,9 @@ body {
   font-family: 'Roboto Slab', serif !important;
   margin-bottom: 100%; }
 
+.link {
+  color: #0000EE !important; }
+
 .footer {
   position: absolute;
   bottom: 0;
