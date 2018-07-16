@@ -35,6 +35,9 @@ app.get('/blog', function (req, res) {
 app.get('/contacto', function (req, res) {
   res.sendFile(__dirname+'/contacto.html');
 })
+app.get('/parseTranscriptJSON',function(req,res){
+  res.sendFile(__dirname+'/parseTranscriptJSON.html');
+});
 
 server.listen(process.env.PORT || 8081,function(){
   console.log('Listening on '+server.address().port);
