@@ -46,21 +46,23 @@ App = {
        var speakers = ['Héctor', 'Roberto'];
        var speakerName = '';
        App.parsedJSON.results.speaker_labels.segments.forEach((element, index) => {
-         speakers.forEach((element2, index2) => {
-           if(index2 == element.speaker_label[4]) {
-             speakerName = speakers[index2];
+         if(element.items.length > 0) {
+           speakers.forEach((element2, index2) => {
+             if(index2 == element.speaker_label[4]) {
+               speakerName = speakers[index2];
+               formattedTranscript += ( speakerName + ': ');
+               console.log('segment index: ' + index + ' , speaker_label: ' + speakerName);
+             }
+           });
+           for(var i = 0; i < element.items.length; i++) {
+              formattedTranscript += (transcriptWordsArray[wordIndex + i] + ' ');
+              console.log('new word: ' + transcriptWordsArray[wordIndex + i]);
            }
-         });
-         formattedTranscript += ( speakerName + ': ');
-         console.log('segment index: ' + index + ' , speaker_label: ' + speakerName);
-         for(var i = 0; i < element.items.length; i++) {
-            formattedTranscript += (transcriptWordsArray[wordIndex + i] + ' ');
-            console.log('new word: ' + transcriptWordsArray[wordIndex + i]);
+           console.log('i: ' + i);
+           wordIndex += i;
+           console.log('wordIndex: ' + wordIndex);
+           formattedTranscript += '\n'
          }
-         console.log('i: ' + i);
-         wordIndex += i;
-         console.log('wordIndex: ' + wordIndex);
-         formattedTranscript += '\n'
        });
        return formattedTranscript;
      }
