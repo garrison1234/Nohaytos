@@ -67,12 +67,13 @@
       <script>
       $( "div" ).addClass(function( index, currentClass ) {
         var addedClass;
-        if (currentClass.indexOf("description") >= 0) {
+        if (currentClass.indexOf("episode") >= 0) {
           console.log('description class found');
           addedClass = "mb-5";
         }
         return addedClass;
       });
+      $("<span>Puedes encontrar la transcripción de este episodio </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>en nuesta página de Patreon</a><span>.</span>").appendTo("#episode_753402");
       </script>
 
       </div>
