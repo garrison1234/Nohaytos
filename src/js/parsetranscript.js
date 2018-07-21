@@ -61,7 +61,7 @@ App = {
            console.log('i: ' + i);
            wordIndex += i;
            console.log('wordIndex: ' + wordIndex);
-           formattedTranscript += '\n'
+           formattedTranscript += '\n\n'
          }
        });
        return formattedTranscript;
