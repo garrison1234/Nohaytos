@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>No Hay Tos Podcast</title>
+        <link rel="icon" href="/assets/favicon.png">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab" rel="stylesheet">
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    </head>
+
+    <body>
+
+      <!--Navigation bar-->
+      <div id="nav-placeholder"></div>
+      <script>
+      $(function(){
+        $("#nav-placeholder").load("/nav");
+      });
+      </script>
+
+      <!--Banner-->
+      <div id="banner-placeholder"></div>
+      <script>
+      $(function(){
+        $("#banner-placeholder").load("/banner");
+      });
+      </script>
+
+      <div class="container mb-5 h-100">
+
+        <div class="row mb-4 mx-1">
+          <div class="col text-justify">
+            <span class="h3">
+              No Hay Tos
+            </span>
+            <span class="h5">
+              es un podcast donde se habla de la vida diaria en México, noticias y demás temas de interés general para mejorar la
+              comprensión auditiva de estudiantes de Español, exponiéndolos a conversaciones reales.
+            </span></div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="/assets/podcast.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Episodios</h5>
+                <p class="card-text"><span>Hay un nuevo episodio cada miércoles.</span><br><br>
+                  <span>Puedes escuchar todos nuestros episodios</span></p>
+                <a href="#" class="btn btn-primary">Todos los episodios</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="/assets/patreon.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Patreon</h5>
+                <p class="card-text"><span>
+                  Si te gustaría apoyar al podcast visita nuestro
+                </span>
+                <a href="https://www.patreon.com/nohaytospodcast" target="_blank">Patreon</a><span>,</span>
+                <span>
+                  donde podrás tener acceso a transcripciones y a otros recursos muy útiles.
+                </span></p>
+                <a href="#" class="btn btn-primary">Patreon</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="/assets/blog.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Blog</h5>
+                <p class="card-text">Visita nuestro blog, en el cual escribimos sobre temas relacionados con el podcast y demás.</p>
+                <a href="#" class="btn btn-primary">Episodios</a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+        <div class="row mt-4 mb-4">
+          <div class="col text-center">
+              <p class="h2" >Últimos Episodios:</p>
+          </div>
+        </div>
+
+      <script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/162248.js?player=small&limit=5'></script>
+      <script>
+      $( "div" ).addClass(function( index, currentClass ) {
+        var addedClass;
+        if (currentClass.indexOf("episode") >= 0) {
+          addedClass = "mb-5";
+        }
+        return addedClass;
+      });
+      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuesta página de Patreon</a><span>.</span>").appendTo("#episode_753402");
+      </script>
+
+      </div>
+
+      <!--Footer-->
+      <div id="footer-placeholder"></div>
+
+      <script>
+      $(function(){
+        $("#footer-placeholder").load("/footer");
+      });
+      </script>
+
+        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"22ba7970863d0475faebd43ac","lid":"0392275f25"}) })</script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>

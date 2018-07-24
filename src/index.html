@@ -17,23 +17,23 @@
 
       <!--Navigation bar-->
       <div id="nav-placeholder"></div>
-
       <script>
       $(function(){
         $("#nav-placeholder").load("/nav");
       });
       </script>
 
-      <div class="container mb-5 h-100">
-        <!--Banner-->
-        <div id="banner-placeholder"></div>
-        <script>
-        $(function(){
-          $("#banner-placeholder").load("/banner");
-        });
-        </script>
+      <!--Banner-->
+      <div id="banner-placeholder"></div>
+      <script>
+      $(function(){
+        $("#banner-placeholder").load("/banner");
+      });
+      </script>
 
-        <div class="row mb-4">
+      <div class="container mb-5 h-100">
+
+        <div class="row mb-4 mx-1">
           <div class="col text-justify">
             <span class="h3">
               No Hay Tos
@@ -41,29 +41,47 @@
             <span class="h5">
               es un podcast donde se habla de la vida diaria en México, noticias y demás temas de interés general para mejorar la
               comprensión auditiva de estudiantes de Español, exponiéndolos a conversaciones reales.
-            </span><br><br>
-            <span class="h5">
-              Tendremos un nuevo episodio cada miércoles. Puedes escuchar todos nuestros episodios
-            </span>
-            <a class="h5 link" href="/episodios">aquí</a><span class="h5">.</span><br><br>
-            <span class="h5">
-              Si te gustaría apoyar al podcast visita nuestro
-            </span>
-            <a class="h5 link" href="https://www.patreon.com/nohaytospodcast" target="_blank">Patreon</a><span class="h5">,</span>
-            <span class="h5">
-              donde podrás tener acceso a transcripciones y a otros recursos muy útiles.
-            </span><br><br>
-            <span class="h5">
-              También tenemos un
-            </span>
-            <a class="h5 link" href="/blog" target="_blank">blog</a>
-            <span class="h5">
-              , en el cual escribimos sobre temas relacionados con el podcast y demás.
-            </span>
-          </div>
+            </span></div>
         </div>
 
-        <div class="row mt-4 mb-4">
+        <div class="row mb-4 mt-4">
+          <div class="col mb-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <a href="/episodios"><img class="card-img-top" src="/assets/podcast.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h5 class="card-title">Episodios</h5>
+                <p class="card-text"><span>Hay un nuevo episodio cada miércoles.</span><br><br>
+                  <span>Puedes escuchar todos nuestros episodios</span></p>
+                <a href="/episodios" class="btn btn-primary">Todos los episodios</a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <a href="https://www.patreon.com/nohaytospodcast"><img class="card-img-top" src="/assets/patreon.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h5 class="card-title">Patreon</h5>
+                <p class="card-text"><span>
+                  Si te gustaría apoyar al podcast visita nuestro Patreon,
+                  donde podrás tener acceso a transcripciones y a otros recursos muy útiles.
+                </span></p>
+                <a href="https://www.patreon.com/nohaytospodcast" class="btn btn-primary">Patreon</a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <a href="/blog"><img class="card-img-top" src="/assets/blog.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h5 class="card-title">Blog</h5>
+                <p class="card-text">Visita nuestro blog, en el cual escribimos sobre temas relacionados con el podcast y demás.</p>
+                <a href="/blog" class="btn btn-primary">Episodios</a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+        <div class="row mt-4 mb-2">
           <div class="col text-center">
               <p class="h2" >Últimos Episodios:</p>
           </div>
@@ -74,7 +92,6 @@
       $( "div" ).addClass(function( index, currentClass ) {
         var addedClass;
         if (currentClass.indexOf("episode") >= 0) {
-          console.log('description class found');
           addedClass = "mb-5";
         }
         return addedClass;

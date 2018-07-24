@@ -7,7 +7,7 @@ $font-family: 'Roboto Slab', serif;
 $body-bg: #ffffff;
 
 $theme-colors: (
-  //"primary": #3F7B3F
+  "primary": #3F7B3F
   //"dark": #000000
 );
 
@@ -23,6 +23,10 @@ body {
 
 .link {
   color: #0000EE !important;
+}
+
+.banner {
+  background-color: #407A40 !important;
 }
 
 .footer {

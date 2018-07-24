@@ -17,22 +17,21 @@
 
       <!--Navigation bar-->
       <div id="nav-placeholder"></div>
-
       <script>
       $(function(){
         $("#nav-placeholder").load("/nav");
       });
       </script>
 
-      <div class="container mb-5 h-100">
+      <!--Banner-->
+      <div id="banner-placeholder"></div>
+      <script>
+      $(function(){
+        $("#banner-placeholder").load("/banner");
+      });
+      </script>
 
-        <!--Banner-->
-        <div id="banner-placeholder"></div>
-        <script>
-        $(function(){
-          $("#banner-placeholder").load("/banner");
-        });
-        </script>
+      <div class="container mx-4 mb-5 h-100">
 
         <div class="row">
           <p class="h1">Contacto</p>
@@ -42,8 +41,8 @@
           <div class="col">
             <span class="lead text-justify">Si tienes alguna sugerencia o simplemente nos quieres saludar, nos puedes enviar un correo a:</span>
             <script language="JavaScript">
-              var username = "nohaytospodcast";
-              var hostname = "gmail.com";
+              var username = "questions";
+              var hostname = "nohaytospodcast.com";
               var linktext = username + "@" + hostname ;
               document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
             </script>
