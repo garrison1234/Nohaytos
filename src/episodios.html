@@ -49,14 +49,34 @@
 
       <script src="https://www.buzzsprout.com/162248.js?player=small" type="text/javascript" charset="utf-8"></script>
       <script>
-      $( "div" ).addClass(function( index, currentClass ) {
-        var addedClass;
-        if (currentClass.indexOf("description") >= 0) {
-          console.log('description class found');
-          addedClass = "mb-5";
-        }
-        return addedClass;
+	$( "div" ).addClass(function( index, currentClass ) {
+	var addedClass;
+	if (currentClass.indexOf("episode") >= 0) {
+	  addedClass = "mb-5";
+	}
+	return addedClass;
       });
+      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_753402");
+      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_759413");
+      </script>
+
+      </div>
+
+      <!--Footer-->
+      <div id="footer-placeholder"></div>
+
+      <script>
+      $(function(){
+        $("#footer-placeholder").load("/footer");
+      });
+      </script>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
       </script>
 
       </div>
