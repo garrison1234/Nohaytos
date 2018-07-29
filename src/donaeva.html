@@ -34,62 +34,54 @@
       <div class="container mb-5 h-100">
 
         <div class="row mb-4 mx-1">
-          <div class="col text-justify">
-            <span class="h3">
-              No Hay Tos
-            </span>
-            <span class="h5">
-              es un podcast donde se habla de la vida diaria en México, noticias y demás temas de interés general para mejorar la
+          <div class="col">
+            <p class="h5 text-justify">
+              Un podcast donde se habla de la vida diaria en México, noticias y demás temas de interés general para mejorar la
               comprensión auditiva de estudiantes de Español, exponiéndolos a conversaciones reales.
-            </span></div>
+            </p></div>
         </div>
 
-        <div class="row">
-          <div class="col">
+        <div class="row mb-4 mt-4">
+          <div class="col mb-4 d-flex justify-content-center col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="/assets/podcast.jpg" alt="Card image cap">
+              <!--<a href="/episodios"><img class="card-img-top" src="/assets/podcast.jpg" alt="Card image cap"></a>-->
               <div class="card-body">
                 <h5 class="card-title">Episodios</h5>
-                <p class="card-text"><span>Hay un nuevo episodio cada miércoles.</span><br><br>
-                  <span>Puedes escuchar todos nuestros episodios</span></p>
-                <a href="#" class="btn btn-primary">Todos los episodios</a>
+                <p class="card-text"><span>Hay un nuevo episodio cada miércoles.</span><br>
+                  <span>Puedes escuchar todos nuestros episodios anteriores dándo click en la siguiente liga.</span></p>
+                <a href="/episodios" class="btn btn-primary">Episodios</a>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col mb-4 d-flex justify-content-center col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="/assets/patreon.jpg" alt="Card image cap">
+              <!--<a href="https://www.patreon.com/nohaytospodcast"><img class="card-img-top" src="/assets/patreon.jpg" alt="Card image cap"></a>-->
               <div class="card-body">
                 <h5 class="card-title">Patreon</h5>
                 <p class="card-text"><span>
-                  Si te gustaría apoyar al podcast visita nuestro
-                </span>
-                <a href="https://www.patreon.com/nohaytospodcast" target="_blank">Patreon</a><span>,</span>
-                <span>
+                  Si te gustaría apoyar al podcast visita nuestro Patreon,
                   donde podrás tener acceso a transcripciones y a otros recursos muy útiles.
                 </span></p>
-                <a href="#" class="btn btn-primary">Patreon</a>
+                <a href="https://www.patreon.com/bePatron?u=12162147" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+                <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col mb-4 d-flex justify-content-center col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="/assets/blog.jpg" alt="Card image cap">
+                <!--<a href="/blog"><img class="card-img-top" src="/assets/blog.jpg" alt="Card image cap"></a>-->
               <div class="card-body">
                 <h5 class="card-title">Blog</h5>
-                <p class="card-text">Visita nuestro blog, en el cual escribimos sobre temas relacionados con el podcast y demás.</p>
-                <a href="#" class="btn btn-primary">Episodios</a>
+                <p class="card-text">Visita nuestro blog, en el cual escribimos sobre temas relacionados con el podcast y otros aspectos de la vida diaria en México.</p>
+                <a href="/blog" class="btn btn-primary">Blog</a>
               </div>
             </div>
           </div>
       </div>
 
-        <div class="row mt-4 mb-4">
-          <div class="col text-center">
-              <p class="h2" >Últimos Episodios:</p>
-          </div>
-        </div>
-
+      <div class="d-flex justify-content-center mb-3 mt-2">
+        <p class="h2" >Últimos Episodios:</p>
+      </div>
       <script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/162248.js?player=small&limit=5'></script>
       <script>
       $( "div" ).addClass(function( index, currentClass ) {
@@ -99,8 +91,22 @@
         }
         return addedClass;
       });
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuesta página de Patreon</a><span>.</span>").appendTo("#episode_753402");
+      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_753402");
+      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_759413");
       </script>
+
+      <div class="d-flex justify-content-center mt-4">
+        <p class="h2" >Síguenos en twitter:</p>
+      </div>
+      <div class="row">
+        <div class="col col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6">
+          <div class="d-flex justify-content-center mb-4">
+            <a class="twitter-timeline" href="https://twitter.com/nohaytospodcast?ref_src=twsrc%5Etfw">Tweets by nohaytospodcast</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+        <div class="col col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
+      </div>
 
       </div>
 
