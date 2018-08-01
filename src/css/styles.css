@@ -12,6 +12,9 @@ body {
 .banner {
   background-color: #407A40 !important; }
 
+.button {
+  background-color: #407A40 !important; }
+
 .footer {
   position: absolute;
   bottom: 0;
