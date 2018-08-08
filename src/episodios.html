@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <title>No Hay Tos Podcast</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-	      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab" rel="stylesheet">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<head>
+  <title>No Hay Tos Podcast</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    </head>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab" rel="stylesheet">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <body>
+</head>
 
-      <!--Navigation bar-->
-      <div id="nav-placeholder"></div>
-      <script>
-      $(function(){
-        $("#nav-placeholder").load("/nav");
-      });
-      </script>
+<body>
 
-      <!--Banner-->
-      <div id="banner-placeholder"></div>
-      <script>
-      $(function(){
-        $("#banner-placeholder").load("/banner");
-      });
-      </script>
+  <!--Navigation bar-->
+  <div id="nav-placeholder"></div>
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("/nav");
+    });
+  </script>
 
-      <div class="container mb-5 h-100">
+  <!--Banner-->
+  <div id="banner-placeholder"></div>
+  <script>
+    $(function () {
+      $("#banner-placeholder").load("/banner");
+    });
+  </script>
 
-        <div class="row mb-4">
-          <div class="col">
-              <p class="h2 text-center">Todos Los Episodios:</p>
-          </div>
-        </div>
+  <div class="container mb-5 h-100">
 
-        <div class="row mb-4">
-          <div class="col text-center">
-              <span class="h5">
-                Un nuevo episodio cada miércoles
-              </span>
-          </div>
-        </div>
+    <div class="row mb-4">
+      <div class="col">
+        <p class="h2 text-center">Todos Los Episodios:</p>
+      </div>
+    </div>
 
-      <script src="https://www.buzzsprout.com/162248.js?player=small" type="text/javascript" charset="utf-8"></script>
-      <script>
-	$( "div" ).addClass(function( index, currentClass ) {
-	var addedClass;
-	if (currentClass.indexOf("episode") >= 0) {
-	  addedClass = "mb-5";
-	}
-	return addedClass;
+    <div class="row mb-4">
+      <div class="col text-center">
+        <span class="h5">
+          Un nuevo episodio cada miércoles
+        </span>
+      </div>
+    </div>
+
+    <script src="https://www.buzzsprout.com/162248.js?player=small" type="text/javascript" charset="utf-8"></script>
+    <script>
+      $("div").addClass(function (index, currentClass) {
+        var addedClass;
+        if (currentClass.indexOf("episode") >= 0) {
+          addedClass = "mb-5";
+        }
+        return addedClass;
       });
       $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_753402");
       $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_759413");
       $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_765119");
-      </script>
+    </script>
 
-      </div>
+  </div>
 
-      <!--Footer-->
-      <div id="footer-placeholder"></div>
+  <!--Footer-->
+  <div id="footer-placeholder"></div>
 
-      <script>
-      $(function(){
-        $("#footer-placeholder").load("/footer");
-      });
-      </script>
+  <script>
+    $(function () {
+      $("#footer-placeholder").load("/footer");
+    });
+  </script>
 
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-    </body>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+
 </html>
 
-      </script>
+</script>
 
-      </div>
+</div>
 
-      <!--Footer-->
-      <div id="footer-placeholder"></div>
+<!--Footer-->
+<div id="footer-placeholder"></div>
 
-      <script>
-      $(function(){
-        $("#footer-placeholder").load("/footer");
-      });
-      </script>
+<script>
+  $(function () {
+    $("#footer-placeholder").load("/footer");
+  });
+</script>
 
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-    </body>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+
 </html>
