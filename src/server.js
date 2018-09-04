@@ -20,6 +20,9 @@ app.get("/nav", function(req, res) {
 app.get("/banner", function(req, res) {
   res.sendFile(__dirname + "/banner.html");
 });
+app.get("/player", function(req, res) {
+  res.sendFile(__dirname + "/player.html");
+});
 app.get("/footer", function(req, res) {
   res.sendFile(__dirname + "/footer.html");
 });

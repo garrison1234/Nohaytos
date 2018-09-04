@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
   <title>No Hay Tos Podcast</title>
@@ -7,30 +7,19 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css?family=Mogra|Open+Sans|Patua+One" rel="stylesheet">
-  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-    #mc_embed_signup {
-      background: #fff;
-      clear: left;
-    }
-
-    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-  </style>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
-
   <!--Navigation bar-->
-  <nav class="navbar navbar-expand-md sticky-top">
+  <nav id="navbar" class="navbar navbar-expand-md sticky-top load-hidden">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="/assets/nohaytos_logo.svg" width="70" height="88" alt="NoHayTos"> No Hay Tos
+      <a class="navbar-brand py-2" href="#showcase">
+        <img src="/assets/nohaytos_logo.svg" width="48" height="61" alt="NoHayTos">
+        <span class="align-bottom">No Hay Tos</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon">
@@ -40,179 +29,334 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link mx-2" href="/episodios">Episodios</a>
+            <a class="nav-link mx-2" href="#episodios">Episodios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="/acercade">Patreon</a>
+            <a class="nav-link mx-2" href="#patreon">Patreon</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="https://medium.com/nohaytos">Acerca de</a>
+            <a class="nav-link mx-2" href="#acercade">Acerca de</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.patreon.com/nohaytospodcast" target="_blank">Blog</a>
+            <a class="nav-link mx-2" href="#blog">Blog</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="hero-image d-flex align-items-center flex-column">
-    <h1 class="banner-text py-4 mb-auto">Conversaciones reales en Español. Transcripciones y explicaciones detalladas.</h1>
-    <div class="pb-4">
-      <script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/162248.js?player=small&limit=1'></script>
+  <!--Banner section-->
+  <div id="hero-image" class="hero-image d-flex align-items-center load-hidden">
+    <div class="container">
+      <div class="row justify-content-md-center load-hidden title-row my-4">
+        <p id="episode-title" class="episode_title"></p>
+      </div>
+      <div class="row load-hidden player-row">
+        <div class="col-md-6 col-sm-12">
+          <p id="episode-description" class="episode_description"></p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/162248.js?player=small&limit=1'></script>
+          <script>
+            var nameString = ($(".episode_name").text()).split("No Hay Tos: ").pop();
+            nameString += " - ";
+            $(".episode_name").remove();
+            var dateString = $(".date").text();
+            $(".date").remove();
+            var titleString = nameString.concat(dateString);
+            $('#episode-title').append(titleString);
+            var descString = $(".description").text();
+            $(".description").remove();
+            $('#episode-description').append(descString);
+            $(".buzz_share").remove();
+          </script>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="container mb-5 h-100">
-
-    <div class="row mb-4 mx-1">
-      <div class="col">
-        <p class="h5 text-justify">
-          Una podcast donde se habla de la vida diaria en México, noticias y demás temas de interés general para mejorar la comprensión
-          auditiva de estudiantes de Español, exponiéndolos a conversaciones reales.
-        </p>
-      </div>
-    </div>
-
-    <div class="row mb-2 mt-4">
-      <div class="col mb-4 d-flex justify-content-center col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-          <!--<a href="/episodios"><img class="card-img-top" src="/assets/podcast.jpg" alt="Card image cap"></a>-->
-          <div class="card-body">
-            <h5 class="card-title">Episodios</h5>
-            <p class="card-text">
-              <span>Hay un nuevo episodio cada miércoles.</span>
-              <br>
-              <span>Puedes escuchar todos nuestros episodios anteriores dándo click en la siguiente liga.</span>
-            </p>
-            <a href="/episodios" class="btn btn-primary">Episodios</a>
+  <!--Episodios section-->
+  <div class="container-fluid my-4 pt-4 mx-4">
+    <section class="header_reveal load-hidden">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4 header">Todos los episodios</h1>
+          <img class="logo img-fluid" src="/assets/episodios.svg" width="48" alt="Episodios logo">
+          <div class="container px-4">
+            <hr class="style-one">
           </div>
         </div>
       </div>
-      <div class="col mb-4 d-flex justify-content-center col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-          <!--<a href="https://www.patreon.com/nohaytospodcast"><img class="card-img-top" src="/assets/patreon.jpg" alt="Card image cap"></a>-->
-          <div class="card-body">
-            <h5 class="card-title">Patreon</h5>
-            <p class="card-text">
-              <span>
-                Si te gustaría apoyar al podcast visita nuestro Patreon, donde podrás tener acceso a transcripciones y a otros recursos muy
-                útiles.
-              </span>
-            </p>
-            <a href="https://www.patreon.com/bePatron?u=12162147" data-patreon-widget-type="become-patron-button">Become
-              a Patron!</a>
-            <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+    </section>
+    <section class=" content load-hidden">
+      <div class="row details text-center pt-4">
+        <div class="col-12">
+          <p>Un episodio nuevo cada miercoles y un bonus show cada jueves.</p>
+          <p class="details_bold font-weight-bold">Suscríbete a No Hay Tos:</p>
+        </div>
+      </div>
+      <div class="row py-4">
+        <div class="col-md-3 col-sm-0 "></div>
+        <div class="col-md-6 col-sm-12 d-flex">
+          <div class="flex-fill podcast_item text-center mx-2">
+            <img class="img-fluid button icon apple p-4 mb-1" src="/assets/appleicon.svg" width="48" alt="Apple Podcasts">
+            <p class="button-caption">Apple Podcasts</p>
+          </div>
+          <div class="flex-fill podcast_item text-center mx-2">
+            <img class="img-fluid button icon spotify p-4 mb-1" src="/assets/spotifyicon.svg" width="48" alt="Spotify">
+            <p class="button-caption">Spotify</p>
+          </div>
+          <div class="flex-fill podcast_item text-center mx-2">
+            <img class="img-fluid button icon stitcher p-4 mb-1" src="/assets/stitchericon.svg" width="48" alt="Stitcher">
+            <p class="button-caption">Stitcher</p>
+          </div>
+          <div class="flex-fill podcast_item text-center mx-2">
+            <img class="img-fluid button icon radiopublic p-4 mb-1" src="/assets/rpicon.svg" width="48" alt="Radio Public">
+            <p class="button-caption">Radio Public</p>
+          </div>
+          <div class="flex-fill podcast_item text-center mx-2">
+            <img class="img-fluid button icon rss p-4 mb-1" src="/assets/rssicon.svg" width="48" alt="RSS">
+            <p class="button-caption">RSS</p>
           </div>
         </div>
       </div>
-      <div class="col mb-4 d-flex justify-content-center col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-          <!--<a href="/blog"><img class="card-img-top" src="/assets/blog.jpg" alt="Card image cap"></a>-->
-          <div class="card-body">
-            <h5 class="card-title">Blog</h5>
-            <p class="card-text">Visita nuestro blog, en el cual escribimos sobre temas relacionados con el podcast y otros
-              aspectos de la vida diaria en México.</p>
-            <a href="https://medium.com/nohaytos" class="btn btn-primary">Blog</a>
+      <div class="col-md-3 col-sm-0"></div>
+    </section>
+  </div>
+
+  <!--Patreon section-->
+  <div class="container-fluid my-4 pt-4">
+    <section class="header_reveal load-hidden">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4 header">Patreon</h1>
+          <img class="logo img-fluid" src="/assets/patreon.svg" width="36" alt="Patreon logo">
+          <div class="container px-4">
+            <hr class="style-one">
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
-      <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6">
-        <div class="d-flex justify-content-center mb-4">
-          <!-- Begin MailChimp Signup Form -->
-          <div id="mc_embed_signup">
-            <form action="https://nohaytospodcast.us18.list-manage.com/subscribe/post?u=22ba7970863d0475faebd43ac&amp;id=0392275f25"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-              novalidate>
-              <div id="mc_embed_signup_scroll">
-                <h2>Suscríbete y recibe una transcripción mensual, ¡gratis! Además de noticias sobre nuestras entradas de
-                  blog.
-                </h2>
-                <div class="indicates-required">
-                  <span class="asterisk">*</span> indicates required</div>
-                <div class="mc-field-group">
-                  <label for="mce-EMAIL">Email Address
-                    <span class="asterisk">*</span>
-                  </label>
-                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                </div>
-                <div id="mce-responses" class="clear">
-                  <div class="response" id="mce-error-response" style="display:none"></div>
-                  <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="b_22ba7970863d0475faebd43ac_0392275f25" tabindex="-1" value="">
-                </div>
-                <div class="clear">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                </div>
-              </div>
-            </form>
-          </div>
-          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-          <script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-          <!--End mc_embed_signup-->
+      <div class="row details d-flex justify-content-center pt-4 pb-2">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-8 col-sm-0">
+          <p>Obtén acceso exclusivo a transcripts y explicaciones de nuestros episodios. ¡Además nos ayudas a continuar produciendo
+            contenido!
+          </p>
         </div>
+        <div class="col-md-2 col-sm-0"></div>
       </div>
-      <div class="col col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
-    </div>
-
-    <div class="d-flex justify-content-center mb-3 mt-2">
-      <p class="h2">Últimos Episodios:</p>
-    </div>
-    <!-- <script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/162248.js?player=small&limit=5'></script>
-    <script>
-      $("div").addClass(function (index, currentClass) {
-        var addedClass;
-        if (currentClass.indexOf("episode") >= 0) {
-          addedClass = "mb-5";
-        }
-        return addedClass;
-      });
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_788618");
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_782419");
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_776622");
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_772182");
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_753402");
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_759413");
-      $("<span>Puedes encontrar la transcripción de este episodio en </span><a class='link' href='https://www.patreon.com/nohaytospodcast' target='_blank'>nuestra página de Patreon</a><span>.</span>").appendTo("#episode_765119");
-    </script> -->
-
-    <!--twitter timeline-->
-    <!--
-      <div class="d-flex justify-content-center mt-4">
-        <p class="h2" >Síguenos en twitter:</p>
-      </div>
-      <div class="row">
-        <div class="col col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6">
-          <div class="d-flex justify-content-center mb-4">
-            <a class="twitter-timeline" href="https://twitter.com/nohaytospodcast?ref_src=twsrc%5Etfw" data-tweet-limit="1">Tweets by nohaytospodcast</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </section>
+    <section class="content load-hidden">
+      <div class="row details pt-4 pb-2 d-flex align-items-center">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-4 col-sm-12">
+          <div class="container text-left mb-4">
+            <span class="details_bold font-weight-bold">Transcripts:</span>
+            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
+              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
+          </div>
+          <div class="container my-4 text-center">
+            <a href="https://www.patreon.com/bePatron?u=12162147" target="blank">
+              <img class="img-fluid button" src="/assets/patreonbutton.png" width=256 alt="Become a patreon!">
+            </a>
+          </div>
+          <div class="container text-left mb-4">
+            <span class="details_bold font-weight-bold">Explicaciones:</span>
+            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
+              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
           </div>
         </div>
-        <div class="col col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
-      </div>-->
+        <div class="col-md-4 col-sm-12">
+          <img class="img-fluid image" src="/assets/patreonimage.jpg" width=512 alt="Patreon photo">
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+    </section>
+  </div>
 
+  <!--Acercade section-->
+  <div class="container-fluid my-4 pt-4">
+    <section class="header_reveal load-hidden">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4 header">Acerca de</h1>
+          <img class="logo img-fluid" src="/assets/questionmark.svg" width="36" alt="Question mark">
+          <div class="container px-4">
+            <hr class="style-one">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content load-hidden">
+      <div class="row details d-flex justify-content-center pt-4 pb-2">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-2 col-sm-12">
+          <img class="img-fluid image" src="/assets/fotoHector.jpg" alt="Photo Hector">
+        </div>
+        <div class="col-md-6 col-sm-12 d-flex align-items-center">
+          <div class="container text-left">
+            <span class="details_bold font-weight-bold">Héctor Libreros:</span>
+            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
+              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+      <div class="row details d-flex justify-content-center pt-4 pb-2">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-6 col-sm-12 d-flex align-items-center">
+          <div class="container text-left mb-4">
+            <span class="details_bold font-weight-bold">Roberto Andrade:</span>
+            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
+              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <img class="img-fluid image" src="/assets/fotoRoberto.jpg" alt="Photo Roberto">
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+      <div class="row details d-flex justify-content-center pt-4 pb-2">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-8 col-sm-0">
+          <p class="pb-2">
+            nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque
+            a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc. Anec convallis ipsum et tristique consequat.
+            In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a viverra quam. Integer eu arcu
+            vestibulum, euismod odio a, sodales nunc. contenido!
+          </p>
+          <div id="map"></div>
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+    </section>
+  </div>
+
+  <!--Blog section-->
+  <div class="container-fluid my-4 pt-4">
+    <section class="header_reveal load-hidden">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4 header">Blog</h1>
+          <img class="logo img-fluid" src="/assets/medium.svg" width="36" alt="Medium logo">
+          <div class="container px-4">
+            <hr class="style-one">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content load-hidden">
+      <div class="row details d-flex pt-4 pb-2">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-8 col-sm-12">
+          <img class="img-fluid image mx-4" src="/assets/conchas.png" alt="Conchas photo">
+          <img class="img-fluid image mx-4" src="/assets/guayabera.png" alt="Patreon photo">
+          <img class="img-fluid image mx-4" src="/assets/perro.png" alt="Perro photo">
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+      <div class="row details d-flex justify-content-center pt-4 pb-2">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-8 col-sm-0">
+          <p class="pb-2">
+            nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque
+            a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc. Anec convallis ipsum et tristique consequat.
+            In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a viverra quam. Integer eu arcu
+            vestibulum, euismod odio a, sodales nunc. contenido!
+          </p>
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+    </section>
   </div>
 
   <!--Footer-->
-  <div id="footer-placeholder"></div>
-
-  <script>
-    $(function () {
-      $("#footer-placeholder").load("/footer");
-    });
-  </script>
+  <footer>
+    <div class="container-fluid footer my-4 pt-4">
+      <div class="row text-center d-flex justify-content-center align-items-end">
+        <img src="/assets/nohaytos_logo2.svg" width="48" height="61" alt="NoHayTos">
+        <span class="footer_header">No Hay Tos</span>
+      </div>
+      <div class="row text-center d-flex justify-content-center">
+        <div class="container px-4">
+          <hr class="style-two">
+        </div>
+      </div>
+      <div class="row text-center d-flex justify-content-center">
+        <div class="container footer_email px-4">
+          <p>questions@nohaytospodcast.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-  <script>require(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us18.list-manage.com", "uuid": "22ba7970863d0475faebd43ac", "lid": "0392275f25" }) })</script>
+  <script>
+    ScrollReveal().reveal('.navbar', {
+      duration: 3000,
+      origin: 'top',
+      distance: '300px',
+      viewFactor: 0.8
+
+    });
+    ScrollReveal().reveal('.hero-image', {
+      duration: 2000,
+      origin: 'bottom',
+      viewFactor: 0.8
+    });
+    ScrollReveal().reveal('.title-row', {
+      delay: 2000,
+      duration: 1000,
+      origin: 'right',
+      viewFactor: 0.8
+    });
+    ScrollReveal().reveal('.player-row', {
+      delay: 2500,
+      duration: 1000,
+      origin: 'right',
+      viewFactor: 0.8
+    });
+    ScrollReveal().reveal('.header_reveal', {
+      duration: 2000,
+      origin: 'bottom',
+      viewFactor: 0.8
+    });
+    ScrollReveal().reveal('.logo', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.8
+    });
+    ScrollReveal().reveal('.content', {
+      duration: 2000,
+      origin: 'bottom',
+      viewFactor: 0.3
+    });
+  </script>
+  <script>
+    function initMap() {
+      var options = {
+        zoom: 6,
+        center: { lat: 19.1738, lng: -96.1342 }
+      }
+
+      // new map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // add markers
+      var markerVeracruz = new google.maps.Marker({
+        position: { lat: 19.1738, lng: -96.1342 },
+        map: map
+      });
+      var markerXalapa = new google.maps.Marker({
+        position: { lat: 19.5438, lng: -96.9102 },
+        map: map
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR3uC4BMywPdfLJxW6ULftnQmv9jftTs&callback=initMap" async
+    defer></script>
 </body>
 
 </html>

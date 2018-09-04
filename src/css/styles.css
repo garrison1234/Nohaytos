@@ -2,6 +2,9 @@ html {
   position: relative;
   min-height: 100%; }
 
+html.sr .load-hidden {
+  visibility: hidden; }
+
 body {
   font-family: Open Sans;
   font-style: normal;
@@ -11,16 +14,28 @@ body {
   color: #2b303a;
   margin-bottom: 100%; }
 
+hr.style-one {
+  border: 0;
+  height: 2px;
+  background: #2b303a;
+  background-image: linear-gradient(to right, #f7f0f5, #2b303a, #f7f0f5); }
+
+hr.style-two {
+  border: 0;
+  height: 2px;
+  background: #f7f0f5;
+  background-image: linear-gradient(to right, #2b303a, #f7f0f5, #2b303a); }
+
 .navbar {
   background-color: #f7f0f5;
-  height: 15vh; }
+  height: 10vh; }
 
 .navbar-brand {
   font-family: Mogra;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 36px !important;
+  font-size: 32px !important;
   text-align: center;
   color: #ce3b4d !important; }
 
@@ -37,29 +52,31 @@ body {
 
 /* The hero image */
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.9) 10%), url("/assets/Maron-Obama-Podcast-web-2-800x400.jpg");
-  /* Set a specific height */
-  height: 85vh;
+  background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/Maron-Obama-Podcast-web-2-800x400.jpg");
+  height: 90vh;
   display: block;
-  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
+  .hero-image .episode_title {
+    color: #f7f0f5 !important;
+    font-family: Patua One;
+    text-align: center !important;
+    font-size: 36px !important;
+    filter: drop-shadow(0 0 30px #2b303a); }
+  .hero-image .episode_description {
+    color: #f7f0f5 !important;
+    font-family: Open Sans;
+    font-size: 18px !important;
+    filter: drop-shadow(0 0 30px #2b303a); }
   .hero-image .episode {
     font-family: Open Sans; }
-    .hero-image .episode .episode_name {
-      color: #f7f0f5 !important;
-      text-align: center;
-      font-size: 36px !important; }
-    .hero-image .episode .meta {
-      text-align: center; }
-      .hero-image .episode .meta .date {
-        color: #f7f0f5 !important; }
-    .hero-image .episode .description {
-      color: #f7f0f5 !important;
-      font-size: 24px !important; }
+    .hero-image .episode iframe {
+      filter: drop-shadow(0 0 30px #2b303a); }
+    .hero-image .episode .buzz_share .buzz_share_item a {
+      background-color: #f7f0f5 !important;
+      border: 2px solid #f7f0f5 !important; }
 
 .banner-text {
   font-family: Open Sans;
@@ -70,16 +87,99 @@ body {
 .episode_name {
   color: #f7f0f5 !important; }
 
+.welcome {
+  color: #2b303a;
+  font-family: Patua One;
+  font-style: Regular;
+  font-size: 64px !important;
+  text-align: center; }
+
+.details {
+  color: #2b303a;
+  font-family: Open Sans;
+  font-style: Bold, Regular;
+  font-size: 24px !important;
+  text-align: center; }
+
+.details_bold {
+  color: #407a40;
+  display: inline !important; }
+
+.header {
+  display: inline-block !important; }
+
+.button:hover {
+  filter: drop-shadow(0 0 3px #2b303a); }
+
+.button-caption {
+  color: #2b303a;
+  font-family: Open Sans;
+  font-style: Regular;
+  font-size: 16px !important;
+  text-align: center; }
+
+.podcast_item {
+  display: inline;
+  cursor: pointer; }
+  .podcast_item .icon {
+    background-color: #ce3b4d;
+    border-radius: 10px;
+    border: 3px solid #ce3b4d !important; }
+  .podcast_item .icon:hover {
+    background-color: #f7f0f5;
+    border-radius: 10px;
+    border: 3px solid #f7f0f5 !important; }
+  .podcast_item .apple {
+    background-image: url("/assets/appleicon.svg"); }
+  .podcast_item .apple:hover {
+    background-image: url("/assets/appleicon2.svg"); }
+  .podcast_item .spotify {
+    background-image: url("/assets/spotifyicon.svg"); }
+  .podcast_item .spotify:hover {
+    background-image: url("/assets/spotifyicon2.svg"); }
+  .podcast_item .stitcher {
+    background-image: url("/assets/stitchericon.svg"); }
+  .podcast_item .stitcher:hover {
+    background-image: url("/assets/stitchericon2.svg"); }
+  .podcast_item .radiopublic {
+    background-image: url("/assets/rpicon.svg"); }
+  .podcast_item .radiopublic:hover {
+    background-image: url("/assets/rpicon2.svg"); }
+  .podcast_item .rss {
+    background-image: url("/assets/rssicon.svg"); }
+  .podcast_item .rss:hover {
+    background-image: url("/assets/rssicon2.svg"); }
+
+.image {
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px #2b303a); }
+
+#map {
+  height: 400px;
+  width: 100%;
+  filter: drop-shadow(0 0 1px #2b303a); }
+
 .link {
   color: #0000ee !important; }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  background-color: #d8d8d8; }
+footer {
+  color: #f7f0f5;
+  background-color: #2b303a;
+  text-align: center; }
+
+.footer_header {
+  font-family: Mogra;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 32px !important; }
+
+.footer_logo {
+  color: #f7f0f5;
+  display: inline-block !important; }
+
+.footer_email {
+  font-style: italic; }
 
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
