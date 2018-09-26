@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Gobold";
+  src: url(/assets/GoboldRegular.otf); }
+
 html {
   position: relative;
   min-height: 100%; }
@@ -31,7 +35,7 @@ hr.style-two {
   height: 10vh; }
 
 .navbar-brand {
-  font-family: Mogra;
+  font-family: Gobold;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
@@ -168,7 +172,7 @@ footer {
   text-align: center; }
 
 .footer_header {
-  font-family: Mogra;
+  font-family: Gobold;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
