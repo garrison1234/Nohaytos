@@ -1,5 +1,7 @@
-// Variables
-$font-family: "Roboto Slab", serif;
+@font-face {
+  font-family: "Gobold";
+  src: url(/assets/GoboldRegular.otf);
+}
 
 // Variable Overrides
 
@@ -49,7 +51,7 @@ hr.style-two {
 }
 
 .navbar-brand {
-  font-family: Mogra;
+  font-family: Gobold;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
@@ -243,7 +245,7 @@ footer {
 }
 
 .footer_header {
-  font-family: Mogra;
+  font-family: Gobold;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
