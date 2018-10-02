@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <title>No Hay Tos Podcast</title>
-        <link rel="icon" href="/assets/favicon.png">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-	      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab" rel="stylesheet">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    </head>
+<head>
+  <title>No Hay Tos Podcast</title>
+  <link rel="icon" href="/assets/favicon.png">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab" rel="stylesheet">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <body>
+</head>
 
-      <div class="container mt-5 mb-5 h-100">
+<body>
 
-        <div class="row mb-3">
-          <div class="col text-center">
-            <p class="h3">
-              Convert Transcription JSON object
-              <form class="mb-4">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">JSON object</label>
-                  <input type="JSON" class="form-control" id="inputJSON" aria-describedby="JSONHelp" placeholder="Enter JSON object">
-                </div>
-                <button type="button" class="btn btn-primary" onclick="App.formatTranscript(); return false;">Submit</button>
-              </form>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Transcription output</label>
-                  <textarea class="form-control" id="form-output" rows="3"></textarea>
-                </div>
-              </form>
-          </div>
-        </div>
+  <div class="container mt-5 mb-5 h-100">
 
+    <div class="row mb-3">
+      <div class="col text-center">
+        <p class="h3">
+          Convert Transcription JSON object
+          <form class="mb-4">
+            <div class="form-group">
+              <label for="exampleInputEmail1">JSON object</label>
+              <input type="JSON" class="form-control" id="inputJSON" aria-describedby="JSONHelp" placeholder="Enter JSON object">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="App.formatTranscript(); return false;">Submit</button>
+          </form>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Transcription output</label>
+              <textarea class="form-control" id="form-output" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Transcription output (with timestamps)</label>
+              <textarea class="form-control" id="form-output-timestamps" rows="3"></textarea>
+            </div>
+          </form>
       </div>
+    </div>
 
-      <!--Footer-->
-      <div id="footer-placeholder"></div>
+  </div>
 
-      <script>
-      $(function(){
-        $("#footer-placeholder").load("/footer");
-      });
-      </script>
+  <!--Footer-->
+  <div id="footer-placeholder"></div>
 
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/parsetranscript.js"></script>
-    </body>
+  <script>
+    $(function () {
+      $("#footer-placeholder").load("/footer");
+    });
+  </script>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/parsetranscript.js"></script>
+</body>
+
 </html>
