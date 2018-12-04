@@ -82,7 +82,7 @@ App = {
       "\r\n" +
       "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, TertiaryColour, BackColour, Bold, Italic, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, AlphaLevel, Encoding" +
       "\r\n" +
-      "Style: Texto,Patua One,5npm st6,3813419,16118007,16118007,3813429,1,0,0,0,0,10,50,50,0,0,0" +
+      "Style: Texto,Patua One,56,3813419,16118007,16118007,3813429,1,0,0,0,0,10,50,50,0,0,0" +
       "\r\n" +
       "\r\n" +
       "[Events]" +
