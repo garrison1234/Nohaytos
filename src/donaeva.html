@@ -1,373 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>No Hay Tos Podcast</title>
+    <link rel="icon" href="/assets/favicon.png" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mogra|Open+Sans|Patua+One"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles2.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
 
-<head>
-  <title>No Hay Tos Podcast</title>
-  <link rel="icon" href="/assets/favicon.png">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Mogra|Open+Sans|Patua+One" rel="stylesheet">
-  <link rel="stylesheet" href="/css/bootstrap.css">
-  <link rel="stylesheet" href="/css/styles2.css">
-  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-</head>
+  <body>
+    <!-- Navigation bar -->
+    <nav id="navbar" class="navbar navbar-expand-md sticky-top load-hidden">
+      <div class="container-fluid">
+        <a class="navbar-brand py-2" href="#showcase">
+          <img
+            src="/assets/cactuslogo.svg"
+            width="48"
+            height="61"
+            alt="NoHayTos"
+          />
+          <span class="align-bottom">No Hay Tos</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="navbar-toggler-icon">
+            <i class="fa fa-navicon"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#episodios">Episodios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#patreon">Patreon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#acercade">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<body>
-  <!--Navigation bar-->
-  <nav id="navbar" class="navbar navbar-expand-md sticky-top load-hidden">
-    <div class="container-fluid">
-      <a class="navbar-brand py-2" href="#showcase">
-        <img src="/assets/cactuslogo.svg" width="48" height="61" alt="NoHayTos">
-        <span class="align-bottom">No Hay Tos</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon">
-          <i class="fa fa-navicon"></i>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#episodios">Episodios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#patreon">Patreon</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#acercade">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#blog">Blog</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!--Banner section-->
-  <div id="hero-image" class="hero-image d-flex align-items-center load-hidden">
-    <div class="container">
-      <div class="row justify-content-md-center load-hidden title-row my-4">
-        <p id="episode-title" class="episode_title"></p>
-      </div>
-      <div class="row load-hidden player-row">
-        <div class="col-md-6 col-sm-12">
-          <p id="episode-description" class="episode_description"></p>
+    <!-- Banner section -->
+    <div
+      id="hero-image"
+      class="hero-image d-flex align-items-center load-hidden"
+    >
+      <div class="container">
+        <div class="row justify-content-md-center load-hidden title-row my-4">
+          <p id="episode-title" class="episode_title"></p>
         </div>
-        <div class="col-md-6 col-sm-12">
-          <script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/162248.js?player=small&limit=1'></script>
-          <script>
-            var nameString = ($(".episode_name").text()).split("No Hay Tos: ").pop();
-            nameString += " - ";
-            $(".episode_name").remove();
-            var dateString = $(".date").text();
-            $(".date").remove();
-            var titleString = nameString.concat(dateString);
-            $('#episode-title').append(titleString);
-            var descString = $(".description").text();
-            $(".description").remove();
-            $('#episode-description').append(descString);
-            $(".buzz_share").remove();
-          </script>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Episodios section-->
-  <div class="container-fluid my-4 pt-4 mx-4">
-    <section class="header_reveal load-hidden">
-      <div class="row welcome text-center">
-        <div class="col-12">
-          <h1 class="display-4 header">Todos los episodios</h1>
-          <img class="logo img-fluid" src="/assets/episodios.svg" width="48" alt="Episodios logo">
-          <div class="container px-4">
-            <hr class="style-one">
+        <div class="row load-hidden player-row">
+          <div class="col-md-6 col-sm-12">
+            <p id="episode-description" class="episode_description"></p>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class=" content load-hidden">
-      <div class="row details text-center pt-4">
-        <div class="col-12">
-          <p>Un episodio nuevo cada miercoles y un bonus show cada jueves.</p>
-          <p class="details_bold font-weight-bold">Suscríbete a No Hay Tos:</p>
-        </div>
-      </div>
-      <div class="row py-4">
-        <div class="col-md-3 col-sm-0 "></div>
-        <div class="col-md-6 col-sm-12 d-flex">
-          <div class="flex-fill podcast_item text-center mx-2">
-            <img class="img-fluid button icon apple p-4 mb-1" src="/assets/appleicon.svg" width="48" alt="Apple Podcasts">
-            <p class="button-caption">Apple Podcasts</p>
+          <div class="col-md-6 col-sm-12">
+            <script
+              type="text/javascript"
+              charset="utf-8"
+              src="https://www.buzzsprout.com/162248.js?player=small&limit=1"
+            ></script>
+            <script>
+              var nameString = $(".episode_name")
+                .text()
+                .toUpperCase()
+                .split("No Hay Tos: ")
+                .pop();
+              nameString += " - ";
+              $(".episode_name").remove();
+              var dateString = $(".date").text();
+              $(".date").remove();
+              var titleString = nameString.concat(dateString.toUpperCase());
+              $("#episode-title").append(titleString);
+              var descString = $(".description").text();
+              $(".description").remove();
+              $("#episode-description").append(descString);
+              $(".buzz_share").remove();
+            </script>
           </div>
-          <div class="flex-fill podcast_item text-center mx-2">
-            <img class="img-fluid button icon spotify p-4 mb-1" src="/assets/spotifyicon.svg" width="48" alt="Spotify">
-            <p class="button-caption">Spotify</p>
-          </div>
-          <div class="flex-fill podcast_item text-center mx-2">
-            <img class="img-fluid button icon stitcher p-4 mb-1" src="/assets/stitchericon.svg" width="48" alt="Stitcher">
-            <p class="button-caption">Stitcher</p>
-          </div>
-          <div class="flex-fill podcast_item text-center mx-2">
-            <img class="img-fluid button icon radiopublic p-4 mb-1" src="/assets/rpicon.svg" width="48" alt="Radio Public">
-            <p class="button-caption">Radio Public</p>
-          </div>
-          <div class="flex-fill podcast_item text-center mx-2">
-            <img class="img-fluid button icon rss p-4 mb-1" src="/assets/rssicon.svg" width="48" alt="RSS">
-            <p class="button-caption">RSS</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-0"></div>
-    </section>
-  </div>
-
-  <!--Patreon section-->
-  <div class="container-fluid my-4 pt-4">
-    <section class="header_reveal load-hidden">
-      <div class="row welcome text-center">
-        <div class="col-12">
-          <h1 class="display-4 header">Patreon</h1>
-          <img class="logo img-fluid" src="/assets/patreon.svg" width="36" alt="Patreon logo">
-          <div class="container px-4">
-            <hr class="style-one">
-          </div>
-        </div>
-      </div>
-      <div class="row details d-flex justify-content-center pt-4 pb-2">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-8 col-sm-0">
-          <p>Obtén acceso exclusivo a transcripts y explicaciones de nuestros episodios. ¡Además nos ayudas a continuar
-            produciendo
-            contenido!
-          </p>
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-    </section>
-    <section class="content load-hidden">
-      <div class="row details pt-4 pb-2 d-flex align-items-center">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-4 col-sm-12">
-          <div class="container text-left mb-4">
-            <span class="details_bold font-weight-bold">Transcripts:</span>
-            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut
-              hendrerit.
-              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
-          </div>
-          <div class="container my-4 text-center">
-            <a href="https://www.patreon.com/bePatron?u=12162147" target="blank">
-              <img class="img-fluid button" src="/assets/patreonbutton.png" width=256 alt="Become a patreon!">
-            </a>
-          </div>
-          <div class="container text-left mb-4">
-            <span class="details_bold font-weight-bold">Explicaciones:</span>
-            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut
-              hendrerit.
-              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <img class="img-fluid image" src="/assets/sesionFotos/_MG_2468.jpg" width=512 alt="Patreon photo">
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-    </section>
-  </div>
-
-  <!--Acercade section-->
-  <div class="container-fluid my-4 pt-4">
-    <section class="header_reveal load-hidden">
-      <div class="row welcome text-center">
-        <div class="col-12">
-          <h1 class="display-4 header">Acerca de</h1>
-          <img class="logo img-fluid" src="/assets/questionmark.svg" width="36" alt="Question mark">
-          <div class="container px-4">
-            <hr class="style-one">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="content load-hidden">
-      <div class="row details d-flex justify-content-center pt-4 pb-2">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-2 col-sm-12">
-          <img class="img-fluid image" src="/assets/sesionFotos/_MG_2613.jpg" alt="Photo Hector">
-        </div>
-        <div class="col-md-6 col-sm-12 d-flex align-items-center">
-          <div class="container text-left">
-            <span class="details_bold font-weight-bold">Héctor Libreros:</span>
-            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut
-              hendrerit.
-              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-      <div class="row details d-flex justify-content-center pt-4 pb-2">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-6 col-sm-12 d-flex align-items-center">
-          <div class="container text-left mb-4">
-            <span class="details_bold font-weight-bold">Roberto Andrade:</span>
-            <span>nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut
-              hendrerit.
-              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc.</span>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-12">
-          <img class="img-fluid image" src="/assets/sesionFotos/_MG_2611.jpg" alt="Photo Roberto">
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-      <div class="row details d-flex justify-content-center pt-4 pb-2">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-8 col-sm-0">
-          <p class="pb-2">
-            nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
-            Pellentesque
-            a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc. Anec convallis ipsum et tristique
-            consequat.
-            In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a viverra quam. Integer eu
-            arcu
-            vestibulum, euismod odio a, sodales nunc. contenido!
-          </p>
-          <div id="map"></div>
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-    </section>
-  </div>
-
-  <!--Blog section-->
-  <div class="container-fluid my-4 pt-4">
-    <section class="header_reveal load-hidden">
-      <div class="row welcome text-center">
-        <div class="col-12">
-          <h1 class="display-4 header">Blog</h1>
-          <img class="logo img-fluid" src="/assets/medium.svg" width="36" alt="Medium logo">
-          <div class="container px-4">
-            <hr class="style-one">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="content load-hidden">
-      <div class="row details d-flex pt-4 pb-2">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-8 col-sm-12">
-          <img class="img-fluid image mx-4" src="/assets/conchas.png" alt="Conchas photo">
-          <img class="img-fluid image mx-4" src="/assets/guayabera.png" alt="Patreon photo">
-          <img class="img-fluid image mx-4" src="/assets/perro.png" alt="Perro photo">
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-      <div class="row details d-flex justify-content-center pt-4 pb-2">
-        <div class="col-md-2 col-sm-0"></div>
-        <div class="col-md-8 col-sm-0">
-          <p class="pb-2">
-            nec convallis ipsum et tristique consequat. In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
-            Pellentesque
-            a viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales nunc. Anec convallis ipsum et tristique
-            consequat.
-            In sed imperdiet augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a viverra quam. Integer eu
-            arcu
-            vestibulum, euismod odio a, sodales nunc. contenido!
-          </p>
-        </div>
-        <div class="col-md-2 col-sm-0"></div>
-      </div>
-    </section>
-  </div>
-
-  <!--Footer-->
-  <footer>
-    <div class="container-fluid footer my-4 pt-4">
-      <div class="row text-center d-flex justify-content-center align-items-end">
-        <img src="/assets/cactuslogowhite.svg" width="48" height="61" alt="NoHayTos">
-        <span class="footer_header">No Hay Tos</span>
-      </div>
-      <div class="row text-center d-flex justify-content-center">
-        <div class="container px-4">
-          <hr class="style-two">
-        </div>
-      </div>
-      <div class="row text-center d-flex justify-content-center">
-        <div class="container footer_email px-4">
-          <p>questions@nohaytospodcast.com</p>
         </div>
       </div>
     </div>
-  </footer>
 
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script>
-    ScrollReveal().reveal('.navbar', {
-      duration: 3000,
-      origin: 'top',
-      distance: '300px',
-      viewFactor: 0.8
+    <!-- Episodios section -->
+    <div class="container-fluid my-4 pt-4">
+      <section class="header_reveal load-hidden">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4 header">TODOS LOS EPISODIOS</h1>
+            <img
+              class="logo img-fluid"
+              src="/assets/episodios.svg"
+              width="48"
+              alt="Episodios logo"
+            />
+            <div class="container px-4"><hr class="style-one" /></div>
+          </div>
+        </div>
+      </section>
+      <section class=" content load-hidden">
+        <div class="row details text-center pt-4">
+          <div class="col-12">
+            <p>Un episodio nuevo cada miercoles y un bonus show cada jueves.</p>
+            <p class="details_bold font-weight-bold">
+              Suscríbete a No Hay Tos:
+            </p>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-md-3 col-sm-0 "></div>
+          <div class="col-md-6 col-sm-12 d-flex">
+            <div class="flex-fill podcast_item text-center mx-2">
+              <img
+                class="img-fluid button icon apple p-4 mb-1"
+                src="/assets/appleicon.svg"
+                width="48"
+                alt="Apple Podcasts"
+              />
+              <p class="button-caption">Apple Podcasts</p>
+            </div>
+            <div class="flex-fill podcast_item text-center mx-2">
+              <img
+                class="img-fluid button icon spotify p-4 mb-1"
+                src="/assets/spotifyicon.svg"
+                width="48"
+                alt="Spotify"
+              />
+              <p class="button-caption">Spotify</p>
+            </div>
+            <div class="flex-fill podcast_item text-center mx-2">
+              <img
+                class="img-fluid button icon stitcher p-4 mb-1"
+                src="/assets/stitchericon.svg"
+                width="48"
+                alt="Stitcher"
+              />
+              <p class="button-caption">Stitcher</p>
+            </div>
+            <div class="flex-fill podcast_item text-center mx-2">
+              <img
+                class="img-fluid button icon radiopublic p-4 mb-1"
+                src="/assets/rpicon.svg"
+                width="48"
+                alt="Radio Public"
+              />
+              <p class="button-caption">Radio Public</p>
+            </div>
+            <div class="flex-fill podcast_item text-center mx-2">
+              <img
+                class="img-fluid button icon rss p-4 mb-1"
+                src="/assets/rssicon.svg"
+                width="48"
+                alt="RSS"
+              />
+              <p class="button-caption">RSS</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-0"></div>
+      </section>
+    </div>
 
-    });
-    ScrollReveal().reveal('.hero-image', {
-      duration: 2000,
-      origin: 'bottom',
-      viewFactor: 0.8
-    });
-    ScrollReveal().reveal('.title-row', {
-      delay: 2000,
-      duration: 1000,
-      origin: 'right',
-      viewFactor: 0.8
-    });
-    ScrollReveal().reveal('.player-row', {
-      delay: 2500,
-      duration: 1000,
-      origin: 'right',
-      viewFactor: 0.8
-    });
-    ScrollReveal().reveal('.header_reveal', {
-      duration: 2000,
-      origin: 'bottom',
-      viewFactor: 0.8
-    });
-    ScrollReveal().reveal('.logo', {
-      duration: 2000,
-      origin: 'right',
-      distance: '300px',
-      viewFactor: 0.8
-    });
-    ScrollReveal().reveal('.content', {
-      duration: 2000,
-      origin: 'bottom',
-      viewFactor: 0.3
-    });
-  </script>
-  <script>
-    function initMap() {
-      var options = {
-        zoom: 6,
-        center: { lat: 19.1738, lng: -96.1342 }
+    <!-- Patreon section -->
+    <div class="container-fluid my-4 pt-4">
+      <section class="header_reveal load-hidden">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4 header">PATREON</h1>
+            <img
+              class="logo img-fluid"
+              src="/assets/patreon.svg"
+              width="36"
+              alt="Patreon logo"
+            />
+            <div class="container px-4"><hr class="style-one" /></div>
+          </div>
+        </div>
+        <div class="row details d-flex justify-content-center pt-4 pb-2">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-0">
+            <p>
+              Obtén acceso exclusivo a transcripts y explicaciones de nuestros
+              episodios. ¡Además nos ayudas a continuar produciendo contenido!
+            </p>
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+      </section>
+      <section class="content load-hidden">
+        <div class="row details pt-4 pb-2 d-flex align-items-center">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-4 col-sm-12">
+            <div class="container text-left mb-4">
+              <span class="details_bold font-weight-bold">Transcripts:</span>
+              <span
+                >nec convallis ipsum et tristique consequat. In sed imperdiet
+                augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a
+                viverra quam. Integer eu arcu vestibulum, euismod odio a,
+                sodales nunc.</span
+              >
+            </div>
+            <div class="container my-4 text-center">
+              <a
+                href="https://www.patreon.com/bePatron?u=12162147"
+                target="blank"
+              >
+                <img
+                  class="img-fluid button"
+                  src="/assets/patreonbutton.png"
+                  width="256"
+                  alt="Become a patreon!"
+                />
+              </a>
+            </div>
+            <div class="container text-left mb-4">
+              <span class="details_bold font-weight-bold">Explicaciones:</span>
+              <span
+                >nec convallis ipsum et tristique consequat. In sed imperdiet
+                augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a
+                viverra quam. Integer eu arcu vestibulum, euismod odio a,
+                sodales nunc.</span
+              >
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <img
+              class="img-fluid image"
+              src="/assets/sesionFotos/_MG_2632.jpg"
+              width="512"
+              alt="Patreon photo"
+            />
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Acercade section -->
+    <div class="container-fluid my-4 pt-4">
+      <section class="header_reveal load-hidden">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4 header">ACERCA DE</h1>
+            <img
+              class="logo img-fluid"
+              src="/assets/questionmark.svg"
+              width="36"
+              alt="Question mark"
+            />
+            <div class="container px-4"><hr class="style-one" /></div>
+          </div>
+        </div>
+      </section>
+      <section class="content load-hidden">
+        <div class="row details d-flex justify-content-center pt-4 pb-2">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-2 col-sm-12">
+            <img
+              class="img-fluid image"
+              src="/assets/sesionFotos/_MG_2613.jpg"
+              alt="Photo Hector"
+            />
+          </div>
+          <div class="col-md-6 col-sm-12 d-flex align-items-center">
+            <div class="container text-left">
+              <span class="details_bold font-weight-bold"
+                >Héctor Libreros:</span
+              >
+              <span
+                >nec convallis ipsum et tristique consequat. In sed imperdiet
+                augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a
+                viverra quam. Integer eu arcu vestibulum, euismod odio a,
+                sodales nunc.</span
+              >
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+        <div class="row details d-flex justify-content-center pt-4 pb-2">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-6 col-sm-12 d-flex align-items-center">
+            <div class="container text-left mb-4">
+              <span class="details_bold font-weight-bold"
+                >Roberto Andrade:</span
+              >
+              <span
+                >nec convallis ipsum et tristique consequat. In sed imperdiet
+                augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a
+                viverra quam. Integer eu arcu vestibulum, euismod odio a,
+                sodales nunc.</span
+              >
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <img
+              class="img-fluid image"
+              src="/assets/sesionFotos/_MG_2611.jpg"
+              alt="Photo Roberto"
+            />
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+        <div class="row details d-flex justify-content-center pt-4 pb-2">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-0">
+            <p class="pb-2">
+              nec convallis ipsum et tristique consequat. In sed imperdiet
+              augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a
+              viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales
+              nunc. Anec convallis ipsum et tristique consequat. In sed
+              imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
+              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod
+              odio a, sodales nunc. contenido!
+            </p>
+            <div id="map"></div>
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Blog section -->
+    <div class="container-fluid my-4 pt-4">
+      <section class="header_reveal load-hidden">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4 header">BLOG</h1>
+            <img
+              class="logo img-fluid"
+              src="/assets/medium.svg"
+              width="36"
+              alt="Medium logo"
+            />
+            <div class="container px-4"><hr class="style-one" /></div>
+          </div>
+        </div>
+      </section>
+      <section class="content load-hidden">
+        <div class="row details d-flex pt-4 pb-2">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-12">
+            <img
+              class="img-fluid image mx-4"
+              src="/assets/conchas.png"
+              alt="Conchas photo"
+            />
+            <img
+              class="img-fluid image mx-4"
+              src="/assets/guayabera.png"
+              alt="Patreon photo"
+            />
+            <img
+              class="img-fluid image mx-4"
+              src="/assets/perro.png"
+              alt="Perro photo"
+            />
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+        <div class="row details d-flex justify-content-center pt-4 pb-2">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-0">
+            <p class="pb-2">
+              nec convallis ipsum et tristique consequat. In sed imperdiet
+              augue. Sed aliquet sagittis nibh ut hendrerit. Pellentesque a
+              viverra quam. Integer eu arcu vestibulum, euismod odio a, sodales
+              nunc. Anec convallis ipsum et tristique consequat. In sed
+              imperdiet augue. Sed aliquet sagittis nibh ut hendrerit.
+              Pellentesque a viverra quam. Integer eu arcu vestibulum, euismod
+              odio a, sodales nunc. contenido!
+            </p>
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid footer my-4 pt-4">
+        <div
+          class="row text-center d-flex justify-content-center align-items-end"
+        >
+          <img
+            src="/assets/cactuslogowhite.svg"
+            width="48"
+            height="61"
+            alt="NoHayTos"
+          />
+          <span class="footer_header">No Hay Tos</span>
+        </div>
+        <div class="row text-center d-flex justify-content-center">
+          <div class="container px-4"><hr class="style-two" /></div>
+        </div>
+        <div class="row text-center d-flex justify-content-center">
+          <div class="container footer_email px-4">
+            <p>questions@nohaytospodcast.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+      ScrollReveal().reveal(".navbar", {
+        duration: 3000,
+        origin: "top",
+        distance: "300px",
+        viewFactor: 0.8
+      });
+      ScrollReveal().reveal(".hero-image", {
+        duration: 2000,
+        origin: "bottom",
+        viewFactor: 0.8
+      });
+      ScrollReveal().reveal(".title-row", {
+        delay: 2000,
+        duration: 1000,
+        origin: "right",
+        viewFactor: 0.8
+      });
+      ScrollReveal().reveal(".player-row", {
+        delay: 2500,
+        duration: 1000,
+        origin: "right",
+        viewFactor: 0.8
+      });
+      ScrollReveal().reveal(".header_reveal", {
+        duration: 2000,
+        origin: "bottom",
+        viewFactor: 0.8
+      });
+      ScrollReveal().reveal(".logo", {
+        duration: 2000,
+        origin: "right",
+        distance: "300px",
+        viewFactor: 0.8
+      });
+      ScrollReveal().reveal(".content", {
+        duration: 2000,
+        origin: "bottom",
+        viewFactor: 0.3
+      });
+    </script>
+    <script>
+      function initMap() {
+        var options = {
+          zoom: 6,
+          center: { lat: 19.1738, lng: -96.1342 }
+        };
+
+        // new map
+        var map = new google.maps.Map(document.getElementById("map"), options);
+
+        // add markers
+        var markerVeracruz = new google.maps.Marker({
+          position: { lat: 19.1738, lng: -96.1342 },
+          map: map
+        });
+        var markerXalapa = new google.maps.Marker({
+          position: { lat: 19.5438, lng: -96.9102 },
+          map: map
+        });
       }
-
-      // new map
-      var map = new google.maps.Map(document.getElementById('map'), options);
-
-      // add markers
-      var markerVeracruz = new google.maps.Marker({
-        position: { lat: 19.1738, lng: -96.1342 },
-        map: map
-      });
-      var markerXalapa = new google.maps.Marker({
-        position: { lat: 19.5438, lng: -96.9102 },
-        map: map
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR3uC4BMywPdfLJxW6ULftnQmv9jftTs&callback=initMap"
-    async defer></script>
-</body>
-
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR3uC4BMywPdfLJxW6ULftnQmv9jftTs&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
 </html>

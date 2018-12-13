@@ -43,6 +43,9 @@ hr.style-two {
   text-align: center;
   color: #ce3b4d !important; }
 
+.container-fluid {
+  padding-right: 0%; }
+
 .collapse {
   font-family: Gobold;
   font-style: normal;
@@ -167,6 +170,8 @@ hr.style-two {
   color: #0000ee !important; }
 
 footer {
+  bottom: 0;
+  height: 200px;
   color: #f7f0f5;
   background-color: #2b303a;
   text-align: center; }
