@@ -68,7 +68,7 @@ hr.style-two {
     background-size: cover;
     position: relative; } }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   .hero-image {
     background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/sesionFotos/_MG_2597.jpg");
     height: 90vh;
