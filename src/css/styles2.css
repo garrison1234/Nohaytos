@@ -58,32 +58,46 @@ hr.style-two {
   color: #2b303a; }
 
 /* The hero image */
-.hero-image {
-  background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/sesionFotos/_MG_2597.jpg");
-  height: 90vh;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
-  .hero-image .episode_title {
-    color: #f7f0f5 !important;
-    font-family: Gobold;
-    text-align: center !important;
-    font-size: 36px !important;
+@media (min-width: 100px) {
+  .hero-image {
+    background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/sesionFotos/_MG_2519.jpg");
+    height: 90vh;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; } }
+
+@media (min-width: 400px) {
+  .hero-image {
+    background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/sesionFotos/_MG_2597.jpg");
+    height: 90vh;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; } }
+
+.hero-image .episode_title {
+  color: #f7f0f5 !important;
+  font-family: Gobold;
+  text-align: center !important;
+  font-size: 36px !important;
+  filter: drop-shadow(0 0 30px #2b303a); }
+
+.hero-image .episode_description {
+  color: #f7f0f5 !important;
+  font-family: Open Sans;
+  font-size: 18px !important;
+  filter: drop-shadow(0 0 30px #2b303a); }
+
+.hero-image .episode {
+  font-family: Open Sans; }
+  .hero-image .episode iframe {
     filter: drop-shadow(0 0 30px #2b303a); }
-  .hero-image .episode_description {
-    color: #f7f0f5 !important;
-    font-family: Open Sans;
-    font-size: 18px !important;
-    filter: drop-shadow(0 0 30px #2b303a); }
-  .hero-image .episode {
-    font-family: Open Sans; }
-    .hero-image .episode iframe {
-      filter: drop-shadow(0 0 30px #2b303a); }
-    .hero-image .episode .buzz_share .buzz_share_item a {
-      background-color: #f7f0f5 !important;
-      border: 2px solid #f7f0f5 !important; }
+  .hero-image .episode .buzz_share .buzz_share_item a {
+    background-color: #f7f0f5 !important;
+    border: 2px solid #f7f0f5 !important; }
 
 .banner-text {
   font-family: Open Sans;

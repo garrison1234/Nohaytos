@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>No Hay Tos Podcast</title>
-    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="icon" href="/assets/favicon1214.png" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -17,7 +17,7 @@
 
   <body>
     <!-- Navigation bar -->
-    <nav id="navbar" class="navbar navbar-expand-md sticky-top load-hidden">
+    <nav id="navbar" class="navbar navbar-expand-md">
       <div class="container-fluid">
         <a class="navbar-brand py-2" href="#showcase">
           <img
@@ -26,7 +26,7 @@
             height="61"
             alt="NoHayTos"
           />
-          <span class="align-bottom">No Hay Tos</span>
+          <span class="align-bottom d-sm-none d-md-block">No Hay Tos</span>
         </a>
         <button
           class="navbar-toggler"
@@ -41,16 +41,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#episodios">Episodios</a>
+              <a class="nav-link mx-2" href="#episodios">EPISODIOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#patreon">Patreon</a>
+              <a class="nav-link mx-2" href="#patreon">PATREON</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#acercade">Acerca de</a>
+              <a class="nav-link mx-2" href="#acercade">ACERCA DE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#blog">Blog</a>
+              <a class="nav-link mx-2" href="#blog">BLOG</a>
             </li>
           </ul>
         </div>
@@ -99,7 +99,7 @@
     </div>
 
     <!-- Episodios section -->
-    <div class="container-fluid my-4 pt-4">
+    <div id="episodios" class="container-fluid my-4 pt-4">
       <section class="header_reveal load-hidden">
         <div class="row welcome text-center">
           <div class="col-12">
@@ -123,52 +123,59 @@
             </p>
           </div>
         </div>
-        <div class="row py-4">
+        <div class="row py-4 text-center">
           <div class="col-md-3 col-sm-0 "></div>
           <div class="col-md-6 col-sm-12 d-flex">
             <div class="flex-fill podcast_item text-center mx-2">
-              <img
-                class="img-fluid button icon apple p-4 mb-1"
-                src="/assets/appleicon.svg"
-                width="48"
-                alt="Apple Podcasts"
-              />
+              <a
+                href="https://itunes.apple.com/us/podcast/no-hay-tos/id1360162037?mt=2"
+                target="_blank"
+                ><img
+                  class="img-fluid button icon apple p-4 mb-1"
+                  src="/assets/appleicon.svg"
+                  width="48"
+                  alt="Apple Podcasts"
+              /></a>
               <p class="button-caption">Apple Podcasts</p>
             </div>
             <div class="flex-fill podcast_item text-center mx-2">
-              <img
-                class="img-fluid button icon spotify p-4 mb-1"
-                src="/assets/spotifyicon.svg"
-                width="48"
-                alt="Spotify"
-              />
+              <a href="https://open.spotify.com/show/24Zc3LPwIH1nnqUbhWY2T0">
+                <img
+                  class="img-fluid button icon spotify p-4 mb-1"
+                  src="/assets/spotifyicon.svg"
+                  width="48"
+                  alt="Spotify"
+              /></a>
               <p class="button-caption">Spotify</p>
             </div>
             <div class="flex-fill podcast_item text-center mx-2">
-              <img
-                class="img-fluid button icon stitcher p-4 mb-1"
-                src="/assets/stitchericon.svg"
-                width="48"
-                alt="Stitcher"
-              />
+              <a href="https://www.stitcher.com/podcast/espanol-real">
+                <img
+                  class="img-fluid button icon stitcher p-4 mb-1"
+                  src="/assets/stitchericon.svg"
+                  width="48"
+                  alt="Stitcher"
+              /></a>
               <p class="button-caption">Stitcher</p>
             </div>
             <div class="flex-fill podcast_item text-center mx-2">
-              <img
-                class="img-fluid button icon radiopublic p-4 mb-1"
-                src="/assets/rpicon.svg"
-                width="48"
-                alt="Radio Public"
-              />
+              <a href="https://radiopublic.com/no-hay-tos-WoAQVO">
+                <img
+                  class="img-fluid button icon radiopublic p-4 mb-1"
+                  src="/assets/rpicon.svg"
+                  width="48"
+                  alt="Radio Public"
+              /></a>
               <p class="button-caption">Radio Public</p>
             </div>
             <div class="flex-fill podcast_item text-center mx-2">
-              <img
-                class="img-fluid button icon rss p-4 mb-1"
-                src="/assets/rssicon.svg"
-                width="48"
-                alt="RSS"
-              />
+              <a href="https://feeds.buzzsprout.com/162248.rss"
+                ><img
+                  class="img-fluid button icon rss p-4 mb-1"
+                  src="/assets/rssicon.svg"
+                  width="48"
+                  alt="RSS"
+              /></a>
               <p class="button-caption">RSS</p>
             </div>
           </div>
@@ -178,7 +185,7 @@
     </div>
 
     <!-- Patreon section -->
-    <div class="container-fluid my-4 pt-4">
+    <div id="patreon" class="container-fluid my-4 pt-4">
       <section class="header_reveal load-hidden">
         <div class="row welcome text-center">
           <div class="col-12">
@@ -253,7 +260,7 @@
     </div>
 
     <!-- Acercade section -->
-    <div class="container-fluid my-4 pt-4">
+    <div id="acercade" class="container-fluid my-4 pt-4">
       <section class="header_reveal load-hidden">
         <div class="row welcome text-center">
           <div class="col-12">
@@ -269,16 +276,20 @@
         </div>
       </section>
       <section class="content load-hidden">
-        <div class="row details d-flex justify-content-center pt-4 pb-2">
-          <div class="col-md-2 col-sm-0"></div>
-          <div class="col-md-2 col-sm-12">
+        <div class="row details d-flex justify-content-center pt-4 pb-2 px-4">
+          <div class="col-md-0 col-lg-2 order-lg-1"></div>
+          <div
+            class="col-md-3 col-sm-12 col-lg-3 mb-2 order-sm-2 order-md-1 order-lg-2"
+          >
             <img
               class="img-fluid image"
               src="/assets/sesionFotos/_MG_2613.jpg"
               alt="Photo Hector"
             />
           </div>
-          <div class="col-md-6 col-sm-12 d-flex align-items-center">
+          <div
+            class="col-md-9 col-sm-12 col-lg-5 d-flex align-items-center mb-2 order-sm-1 order-md-2 order-lg-3"
+          >
             <div class="container text-left">
               <span class="details_bold font-weight-bold"
                 >Héctor Libreros:</span
@@ -291,11 +302,11 @@
               >
             </div>
           </div>
-          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-0 col-lg-2 order-lg-4"></div>
         </div>
         <div class="row details d-flex justify-content-center pt-4 pb-2">
-          <div class="col-md-2 col-sm-0"></div>
-          <div class="col-md-6 col-sm-12 d-flex align-items-center">
+          <div class="col-md-0 col-lg-2"></div>
+          <div class="col-md-9 col-sm-12 col-lg-5 d-flex align-items-center">
             <div class="container text-left mb-4">
               <span class="details_bold font-weight-bold"
                 >Roberto Andrade:</span
@@ -308,14 +319,14 @@
               >
             </div>
           </div>
-          <div class="col-md-2 col-sm-12">
+          <div class="col-md-3 col-sm-12 col-lg-3 mb-2">
             <img
               class="img-fluid image"
               src="/assets/sesionFotos/_MG_2611.jpg"
               alt="Photo Roberto"
             />
           </div>
-          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-0 col-lg-2"></div>
         </div>
         <div class="row details d-flex justify-content-center pt-4 pb-2">
           <div class="col-md-2 col-sm-0"></div>
@@ -337,7 +348,7 @@
     </div>
 
     <!-- Blog section -->
-    <div class="container-fluid my-4 pt-4">
+    <div id="blog" class="container-fluid my-4 pt-4">
       <section class="header_reveal load-hidden">
         <div class="row welcome text-center">
           <div class="col-12">
@@ -357,17 +368,17 @@
           <div class="col-md-2 col-sm-0"></div>
           <div class="col-md-8 col-sm-12">
             <img
-              class="img-fluid image mx-4"
+              class="img-fluid image mx-4 my-2"
               src="/assets/conchas.png"
               alt="Conchas photo"
             />
             <img
-              class="img-fluid image mx-4"
+              class="img-fluid image mx-4 my-2"
               src="/assets/guayabera.png"
               alt="Patreon photo"
             />
             <img
-              class="img-fluid image mx-4"
+              class="img-fluid image mx-4 my-2"
               src="/assets/perro.png"
               alt="Perro photo"
             />
@@ -420,12 +431,12 @@
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script>
-      ScrollReveal().reveal(".navbar", {
-        duration: 3000,
-        origin: "top",
-        distance: "300px",
-        viewFactor: 0.8
-      });
+      // ScrollReveal().reveal(".navbar", {
+      //   duration: 3000,
+      //   origin: "top",
+      //   distance: "300px",
+      //   viewFactor: 0.8
+      // });
       ScrollReveal().reveal(".hero-image", {
         duration: 2000,
         origin: "bottom",
