@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/styles2.css" />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://use.fontawesome.com/b529a2a6cc.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
 
@@ -409,7 +410,7 @@
           <div class="col-lg-3 col-md-3 col-sm-0"></div>
           <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 px-4">
             <img
-              class="img-fluid image pb-2 text-center"
+              class="img-fluid image pb-2"
               src="/assets/nina2.jpg"
               alt="photo nina"
             />
@@ -419,7 +420,7 @@
           >
             <img
               class="img-fluid image pb-2"
-              src="/assets/faro2.jpg"
+              src="/assets/faro3.jpg"
               alt="photo faro"
             />
           </div>
@@ -437,10 +438,7 @@
           <div class="col-md-8 col-sm-0">
             <p class="pb-2">
               En nuestro blog
-              <a
-                class="link"
-                href="https://soundcloud.com/user-430871153"
-                target="_blank"
+              <a class="link" href="https://medium.com/nohaytos" target="_blank"
                 >(visítalo aquí)</a
               >
               puedes encontrar artículos sobre noticias de México y otras partes
@@ -523,31 +521,33 @@
       //   viewFactor: 0.3
       // });
     </script>
-    <script>
-      function initMap() {
-        var options = {
-          zoom: 6,
-          center: { lat: 19.1738, lng: -96.1342 }
-        };
+    <!--
+      <script>
+        function initMap() {
+          var options = {
+            zoom: 6,
+            center: { lat: 19.1738, lng: -96.1342 }
+          };
 
-        // new map
-        var map = new google.maps.Map(document.getElementById("map"), options);
+          // new map
+          var map = new google.maps.Map(document.getElementById("map"), options);
 
-        // add markers
-        var markerVeracruz = new google.maps.Marker({
-          position: { lat: 19.1738, lng: -96.1342 },
-          map: map
-        });
-        var markerXalapa = new google.maps.Marker({
-          position: { lat: 19.5438, lng: -96.9102 },
-          map: map
-        });
-      }
-    </script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR3uC4BMywPdfLJxW6ULftnQmv9jftTs&callback=initMap"
-      async
-      defer
-    ></script>
+          // add markers
+          var markerVeracruz = new google.maps.Marker({
+            position: { lat: 19.1738, lng: -96.1342 },
+            map: map
+          });
+          var markerXalapa = new google.maps.Marker({
+            position: { lat: 19.5438, lng: -96.9102 },
+            map: map
+          });
+        }
+      </script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR3uC4BMywPdfLJxW6ULftnQmv9jftTs&callback=initMap"
+        async
+        defer
+      ></script>
+    -->
   </body>
 </html>

@@ -31,8 +31,7 @@ hr.style-two {
   background-image: linear-gradient(to right, #2b303a, #f7f0f5, #2b303a); }
 
 .navbar {
-  background-color: #f7f0f5;
-  height: 10vh; }
+  background-color: #f7f0f5; }
 
 .navbar-brand {
   font-family: Gobold;
@@ -55,7 +54,8 @@ hr.style-two {
   text-align: center; }
 
 .fa.fa-navicon {
-  color: #2b303a; }
+  color: #2b303a;
+  font-size: 24px; }
 
 /* The hero image */
 @media (min-width: 100px) {
