@@ -17,10 +17,11 @@
   </head>
 
   <body>
+    <a name="top"></a>
     <!-- Navigation bar -->
     <nav id="navbar" class="navbar navbar-expand-md">
       <div class="container-fluid">
-        <a class="navbar-brand py-2" href="#showcase">
+        <a class="navbar-brand py-2" href="#top">
           <img
             src="/assets/cactuslogo.svg"
             width="48"
@@ -61,7 +62,7 @@
     <!-- Banner section -->
     <div id="hero-image" class="hero-image d-flex align-items-center ">
       <div class="container">
-        <div class="row justify-content-md-center  title-row my-4">
+        <div class="row justify-content-md-center title-row my-4 px-2">
           <p id="episode-title" class="episode_title"></p>
         </div>
         <div class="row  player-row">
@@ -118,16 +119,18 @@
       </section>
       <section class=" content ">
         <div class="row details text-center pt-4">
-          <div class="col-12">
+          <div class="col-md-2 col-sm-0 "></div>
+          <div class="col-md-8 col-sm-12">
             <p>Un episodio nuevo cada miercoles y un bonus show cada jueves.</p>
             <p class="details_bold font-weight-bold">
               Suscríbete a No Hay Tos:
             </p>
           </div>
+          <div class="col-md-2 col-sm-0 "></div>
         </div>
         <div class="row py-4 text-center">
-          <div class="col-md-3 col-sm-0 "></div>
-          <div class="col-md-6 col-sm-12 d-flex">
+          <div class="col-md-2 col-sm-0 "></div>
+          <div class="col-md-8 col-sm-12 d-flex">
             <div class="flex-fill podcast_item text-center mx-2">
               <a
                 href="https://itunes.apple.com/us/podcast/no-hay-tos/id1360162037?mt=2"
@@ -193,7 +196,7 @@
             -->
           </div>
         </div>
-        <div class="col-md-3 col-sm-0"></div>
+        <div class="col-md-2 col-sm-0"></div>
       </section>
     </div>
 
@@ -218,7 +221,7 @@
         </div>
         <div class="row details d-flex justify-content-center pt-4 pb-2">
           <div class="col-md-2 col-sm-0"></div>
-          <div class="col-md-8 col-sm-0">
+          <div class="col-md-8 col-sm-12">
             <p>
               Obtén acceso exclusivo a transcripts y explicaciones de nuestros
               episodios. ¡Además nos ayudas a continuar produciendo contenido!
@@ -228,48 +231,60 @@
         </div>
       </section>
       <section class="content ">
-        <div class="row details pt-4 pb-2 d-flex align-items-center">
+        <div class="row details pb-2 d-flex align-items-center">
           <div class="col-md-2 col-sm-0"></div>
-          <div class="col-md-4 col-sm-12">
-            <div class="container text-left mb-4">
-              <span class="details_bold font-weight-bold"
-                >Transcripciones:</span
+          <div class="col-md-8 col-sm-12">
+            <div class="row details d-flex align-items-center">
+              <div
+                class="col-lg-6 col-md-12 order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2"
               >
-              <span
-                >Recibe la transcripción de cada uno de nuestros episodios
-                (excepto bonus shows). Que no se te escape ninguna palabra o
-                expresión que escuches durante nuestras conversaciones.</span
-              >
-            </div>
-            <div class="container my-4 text-center">
-              <a
-                href="https://www.patreon.com/bePatron?u=12162147"
-                target="blank"
+                <div class="container text-left pb-2">
+                  <span class="details_bold font-weight-bold"
+                    >Transcripciones:</span
+                  >
+                  <span
+                    >Recibe la transcripción de cada uno de nuestros episodios
+                    (excepto bonus shows). Que no se te escape ninguna palabra o
+                    expresión que escuches durante nuestras
+                    conversaciones.</span
+                  >
+                </div>
+                <div class="container text-center pb-2">
+                  <a
+                    href="https://www.patreon.com/bePatron?u=12162147"
+                    target="blank"
+                  >
+                    <img
+                      class="img-fluid button"
+                      src="/assets/patreonbutton.png"
+                      width="256"
+                      alt="Become a patreon!"
+                    />
+                  </a>
+                </div>
+                <div class="container text-left">
+                  <span class="details_bold font-weight-bold"
+                    >Explicaciones:</span
+                  >
+                  <span
+                    >Además de las transcripciones puedes recibir explicaciones
+                    en inglés de algunas expresiones que se usan en México y son
+                    parte de nuestros episodios, así como ejemplos con las
+                    mismas.</span
+                  >
+                </div>
+              </div>
+              <div
+                class="col-lg-6 col-md-12 order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1 pb-4"
               >
                 <img
-                  class="img-fluid button"
-                  src="/assets/patreonbutton.png"
-                  width="256"
-                  alt="Become a patreon!"
+                  class="img-fluid image"
+                  src="/assets/sesionFotos/_MG_2632.jpg"
+                  width="512"
+                  alt="Patreon photo"
                 />
-              </a>
+              </div>
             </div>
-            <div class="container text-left mb-4">
-              <span class="details_bold font-weight-bold">Explicaciones:</span>
-              <span
-                >Además de las transcripciones puedes recibir explicaciones en
-                inglés de algunas expresiones que se usan en México y son parte
-                de nuestros episodios, así como ejemplos con las mismas.</span
-              >
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <img
-              class="img-fluid image"
-              src="/assets/sesionFotos/_MG_2632.jpg"
-              width="512"
-              alt="Patreon photo"
-            />
           </div>
           <div class="col-md-2 col-sm-0"></div>
         </div>
@@ -328,59 +343,75 @@
           </div>
           <div class="col-md-2 col-sm-0"></div>
         </div>
-        <div class="row details justify-content-center pt-4 pb-2">
-          <div class="col-md-0 col-lg-2 order-lg-1"></div>
-          <div
-            class="col-md-3 col-sm-12 col-lg-3 mb-2 order-2 order-sm-2 order-md-1 order-lg-1 px-4"
-          >
-            <img
-              class="img-fluid image"
-              src="/assets/sesionFotos/_MG_2613.jpg"
-              alt="Photo Hector"
-            />
-          </div>
-          <div
-            class="col-md-9 col-sm-12 col-lg-5 d-flex align-items-center order-1 order-sm-1 order-md-2 order-lg-2 mb-2"
-          >
-            <div class="container">
-              <span class="details_bold font-weight-bold">Héctor Libreros</span>
-              <span
-                >es un comunicólogo que reside en la ciudad de Veracruz, Mexico.
-                Tiene varios años de experiencia como maestro de Inglés y
-                Español. Actualmente se dedica a la enseñanza en línea.</span
+        <div class="row details justify-content-center pb-4">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-0">
+            <div class="row details d-flex align-items-center">
+              <div
+                class="col-lg-4 col-md-12 col-lg-3 d-flex align-items-center"
               >
+                <img
+                  class="img-fluid image"
+                  src="/assets/sesionFotos/_MG_2613.jpg"
+                  alt="Photo Hector"
+                />
+              </div>
+              <div
+                class="col-lg-8 col-md-12 col-lg-5 d-flex align-items-center pb-2"
+              >
+                <div class="container">
+                  <span class="details_bold font-weight-bold"
+                    >Héctor Libreros</span
+                  >
+                  <span
+                    >es un comunicólogo que reside en la ciudad de Veracruz,
+                    Mexico. Tiene varios años de experiencia como maestro de
+                    Inglés y Español. Actualmente se dedica a la enseñanza en
+                    línea.</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-0 col-lg-2 order-lg-4"></div>
+          <div class="col-md-2 col-sm-0"></div>
         </div>
-        <div class="row details justify-content-center pt-4 pb-2">
-          <div class="col-md-0 col-lg-2"></div>
-          <div
-            class="col-md-9 col-sm-12 col-lg-5 d-flex align-items-center mb-2"
-          >
-            <div class="container">
-              <span class="details_bold font-weight-bold">Roberto Andrade</span>
-              <span>
-                (Beto) es un músico/ percusionista que actualmente reside en la
-                ciudad de Xalapa, México. Imparte clases de inglés y español en
-                línea. También toca en el proyecto musical 3er Oído
-                <a
-                  class="link"
-                  href="https://soundcloud.com/user-430871153"
-                  target="_blank"
-                  >(escúchalos aquí)</a
-                >.</span
+        <div class="row details justify-content-center">
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-0">
+            <div class="row details d-flex align-items-center">
+              <div
+                class="col-lg-4 col-md-12 col-lg-3 d-flex align-items-center"
               >
+                <img
+                  class="img-fluid image"
+                  src="/assets/sesionFotos/_MG_2611.jpg"
+                  alt="Photo Roberto"
+                />
+              </div>
+              <div
+                class="col-lg-8 col-md-12 col-lg-5 d-flex align-items-center pb-2"
+              >
+                <div class="container">
+                  <span class="details_bold font-weight-bold"
+                    >Roberto Andrade</span
+                  >
+                  <span>
+                    (Beto) es un músico/ percusionista que actualmente reside en
+                    la ciudad de Xalapa, México. Imparte clases de inglés y
+                    español en línea. También toca en el proyecto musical 3er
+                    Oído
+                    <a
+                      class="link"
+                      href="https://soundcloud.com/user-430871153"
+                      target="_blank"
+                      >(escúchalos aquí)</a
+                    >.</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-12 col-lg-3 mb-2 px-4">
-            <img
-              class="img-fluid image"
-              src="/assets/sesionFotos/_MG_2611.jpg"
-              alt="Photo Roberto"
-            />
-          </div>
-          <div class="col-md-0 col-lg-2"></div>
+          <div class="col-md-2 col-sm-0"></div>
         </div>
       </section>
     </div>
@@ -407,31 +438,38 @@
       </section>
       <section class="content">
         <div class="row details d-flex pt-4 pb-2 text-center">
-          <div class="col-lg-3 col-md-3 col-sm-0"></div>
-          <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 px-4">
-            <img
-              class="img-fluid image pb-2"
-              src="/assets/nina2.jpg"
-              alt="photo nina"
-            />
+          <div class="col-md-2 col-sm-0"></div>
+          <div class="col-md-8 col-sm-12">
+            <div class="row details justify-content-center">
+              <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 px-4">
+                <img
+                  class="img-fluid image pb-2"
+                  src="/assets/nina2.jpg"
+                  alt="photo nina"
+                />
+              </div>
+              <div
+                class="col-xl-4 col-lg-0 col-md-2 col-sm-12 px-4 d-none d-xl-block"
+              >
+                <img
+                  class="img-fluid image pb-2"
+                  src="/assets/faro3.jpg"
+                  alt="photo faro"
+                />
+              </div>
+              <div
+                class="col-xl-4 col-lg-6 col-md-2 col-sm-12 px-4 d-none d-lg-block"
+              >
+                <img
+                  class="img-fluid image pb-2"
+                  src="/assets/picadas.jpg"
+                  alt="photo picadas"
+                />
+              </div>
+            </div>
           </div>
-          <div
-            class="col-xl-2 col-lg-0 col-md-2 col-sm-12 px-4 d-none d-xl-block"
-          >
-            <img
-              class="img-fluid image pb-2"
-              src="/assets/faro3.jpg"
-              alt="photo faro"
-            />
-          </div>
-          <div class="col-xl-2 col-lg-3 col-md-2 col-sm-12 px-4">
-            <img
-              class="img-fluid image pb-2 d-none d-lg-block"
-              src="/assets/picadas.jpg"
-              alt="photo picadas"
-            />
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-0"></div>
+
+          <div class="col-md-2 col-sm-0"></div>
         </div>
         <div class="row details d-flex justify-content-center pt-4 pb-2">
           <div class="col-md-2 col-sm-0"></div>
