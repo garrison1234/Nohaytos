@@ -64,7 +64,7 @@ hr.style-two {
   padding-right: 0%;
 }
 
-.collapse {
+.nav-link {
   font-family: Gobold;
   font-style: normal;
   font-weight: normal;
@@ -74,8 +74,8 @@ hr.style-two {
 }
 
 .fa.fa-navicon {
-  color: #2b303a;
-  font-size: 24px;
+  color: #2b303a !important;
+  font-size: 36px !important;
 }
 
 /* The hero image */
@@ -259,6 +259,10 @@ hr.style-two {
 
 .link {
   color: #0000ee !important;
+}
+
+.mailChimp-title {
+  font-weight: bold;
 }
 
 footer {
