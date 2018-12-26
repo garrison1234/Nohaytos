@@ -1,0 +1,44 @@
+// Variables
+$font-family: "Roboto Slab", serif;
+
+// Variable Overrides
+
+$body-bg: #ffffff;
+
+$theme-colors: (
+  "primary": #3f7b3f//"dark": #000000
+);
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Roboto Slab", serif !important;
+  margin-bottom: 100%;
+}
+
+.link {
+  color: #0000ee !important;
+}
+
+.banner {
+  background-color: #407a40 !important;
+}
+
+.button {
+  background-color: #407a40 !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #d8d8d8;
+}
+
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
