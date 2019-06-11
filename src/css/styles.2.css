@@ -60,7 +60,7 @@ hr.style-two {
 /* The hero image */
 @media (min-width: 100px) {
   .hero-image {
-    background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(111, 161, 74, 0.5) 0%), url("/assets/sesionFotos/_MG_2519.jpg");
+    background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/sesionFotos/_MG_2519.jpg");
     height: 90vh;
     display: block;
     background-position: center;
@@ -70,7 +70,7 @@ hr.style-two {
 
 @media (min-width: 500px) {
   .hero-image {
-    background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(111, 161, 74, 0.5) 0%), url("/assets/sesionFotos/_MG_2597.jpg");
+    background-image: linear-gradient(to bottom, #f7f0f5 0%, rgba(64, 122, 64, 0.7) 0%), url("/assets/sesionFotos/_MG_2597.jpg");
     height: 90vh;
     display: block;
     background-position: center;
@@ -123,7 +123,7 @@ hr.style-two {
   text-align: center; }
 
 .details_bold {
-  color: #6fa14a;
+  color: #407a40;
   display: inline !important; }
 
 .header {
