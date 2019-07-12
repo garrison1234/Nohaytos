@@ -602,7 +602,23 @@
         <div class="row text-center d-flex justify-content-center">
           <div class="container footer_email px-4">
             <p>
-              Envíanos preguntas y comentarios a: questions@nohaytospodcast.com
+              Envíanos preguntas y comentarios a:
+              <script language="JavaScript">
+                var username = "questions";
+                var hostname = "nohaytospodcast.com";
+                var linktext = username + "@" + hostname;
+                document.write(
+                  "<a class='link' href='" +
+                    "mail" +
+                    "to:" +
+                    username +
+                    "@" +
+                    hostname +
+                    "'>" +
+                    "questions@nohaytospodcast.com" +
+                    "</a>"
+                );
+              </script>
             </p>
           </div>
         </div>
