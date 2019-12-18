@@ -44,6 +44,9 @@ app.get("/parseTranscriptJSON", function(req, res) {
 app.get("/donaeva", function(req, res) {
   res.sendFile(__dirname + "/donaeva.html");
 });
+app.get("/merch", function(req, res) {
+  res.sendFile(__dirname + "/merch.html");
+});
 
 server.listen(process.env.PORT || 8081, function() {
   console.log("Listening on " + server.address().port);
